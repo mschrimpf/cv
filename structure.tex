@@ -46,9 +46,11 @@ BoldItalicFont = Erewhon-BoldItalic,
 SmallCapsFeatures = {Letters = SmallCaps}
 ]{Erewhon-Regular}
 
-\usepackage{titlesec} % Customization of titles
-\usepackage{sectsty} % Allows customization of titles
-\sectionfont{\normalfont\sectionrule{0pt}{0pt}{-6pt}{0.8pt}}
+\usepackage{titlesec} % Customization of titles and their spacing
+%\usepackage{sectsty} % Allows customization of titles
+%\sectionfont{\normalfont\sectionrule{0pt}{0pt}{-6pt}{0.8pt}}
+\titleformat{\section}{\normalfont\large}{\thesection}{0.1em}{}[{\titlerule[0.8pt]}]
+\titlespacing{\section}{0pt}{30pt}{5pt}
 
 \fancypagestyle{plain}{\fancyhf{}\cfoot{\thepage\ / \pageref{LastPage}}} % Define a custom page style
 \pagestyle{plain} % Use the custom page style through the document
@@ -65,25 +67,11 @@ SmallCapsFeatures = {Letters = SmallCaps}
 \let\tmpunderline\underline
 \renewcommand{\underline}[1]{\tmpunderline{\smash{#1}}}
 
-% Columns
-\usepackage{vwcol}
-
 % Text width for tabbing environments
 \newlength{\smallertextwidth}
 \setlength{\smallertextwidth}{\textwidth}
 \addtolength{\smallertextwidth}{-2cm}
 
-\newcommand{\sqbullet}{~\vrule height 1ex width .8ex depth -.2ex} % Custom square bullet point definition
-
-
-\makeatletter
-\newlength\tdima
-\newcommand\tabfill[1]{%
-      \setlength\tdima{\linewidth}%
-      \addtolength\tdima{\@totalleftmargin}%
-      \addtolength\tdima{-\dimen\@curtab}%
-      \parbox[t]{\tdima}{#1\ifhmode\strut\fi}}
-\makeatother
 
 \input{trim_spaces.tex}
 
@@ -118,22 +106,22 @@ O{} % 6: Technologies
 {#1}%
 {\begin{tabular}[t]{@{}l@{}}#1\\ - #2\end{tabular}}%
 %
- &%
+&%
 %
 % right column
 \begin{tabular}[t]{@{}l@{}}%
 % header: project, organisation
 \makeatletter%
-\parbox[t]{0.8\linewidth}{\raggedright 
+\parbox[t]{0.79\linewidth}{\raggedright %
 	\textbf{\trim@spaces{#3}}%
 	\ifthenelse{\isempty{#4}}%
 	{}%
 	{, \textit{\trim@spaces{#4}}}
-}
+\par}%
 % description
 \ifthenelse{\isempty{#5}}%
 {}%
-{\\ \parbox[t]{0.8\linewidth}{\raggedright \trim@spaces{#5}}}%
+{\\ \parbox[t]{0.79\linewidth}{\raggedright \trim@spaces{#5}}}%
 % technologies
 \ifthenelse{\isempty{#6}}%
 {}%
