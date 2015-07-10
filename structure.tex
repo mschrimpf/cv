@@ -85,6 +85,8 @@ SmallCapsFeatures = {Letters = SmallCaps}
       \parbox[t]{\tdima}{#1\ifhmode\strut\fi}}
 \makeatother
 
+\input{trim_spaces.tex}
+
 %----------------------------------------------------------------------------------------
 %	MAIN HEADER COMMAND
 %----------------------------------------------------------------------------------------
@@ -106,23 +108,37 @@ SmallCapsFeatures = {Letters = SmallCaps}
 m % 1: Time frame start
 O{} % 2: Time frame end
 m % 3: Project
-m % 4: Organisation
-m % 5: Description
-m % 6: Technologies
+O{} % 4: Organisation
+O{} % 5: Description
+O{} % 6: Technologies
 }{%
-\begin{tabular}{p{0.15\linewidth} l}
+% left column: time frame
+\begin{tabular}{p{0.15\linewidth} l}%
 \ifthenelse{\isempty{#2}}%
-{#1}
-{\begin{tabular}[t]{@{}l@{}}#1\\ - #2\end{tabular}}
-
- & 
-
-\begin{tabular}[t]{@{}l@{}}
-\parbox[t]{0.8\linewidth}{\raggedright \textbf{#3}, \textit{#4}}\\
-\parbox[t]{0.8\linewidth}{\raggedright #5}
+{#1}%
+{\begin{tabular}[t]{@{}l@{}}#1\\ - #2\end{tabular}}%
+%
+ &%
+%
+% right column
+\begin{tabular}[t]{@{}l@{}}%
+% header: project, organisation
+\makeatletter%
+\parbox[t]{0.8\linewidth}{\raggedright 
+	\textbf{\trim@spaces{#3}}%
+	\ifthenelse{\isempty{#4}}%
+	{}%
+	{, \textit{\trim@spaces{#4}}}
+}
+% description
+\ifthenelse{\isempty{#5}}%
+{}%
+{\\ \parbox[t]{0.8\linewidth}{\raggedright \trim@spaces{#5}}}%
+% technologies
 \ifthenelse{\isempty{#6}}%
-{}
-{\\ \underline{Technologies}: #6}
+{}%
+{\\ \underline{Technologies}: #6}%
+\makeatother
 \end{tabular}
 \end{tabular}
 }
