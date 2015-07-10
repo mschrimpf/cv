@@ -1,0 +1,86 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wilson Resume/CV
+% XeLaTeX Template
+% Version 1.0 (22/1/2015)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Howard Wilson (https://github.com/watsonbox/cv_template_2004) with
+% extensive modifications by Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{report} % Default font size
+
+\input{structure.tex} % Include the file specifying document layout
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\input{content.tex}
+
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{tabbing}
+\hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
+{Address} \> \varAddress\\
+{E-Mail}  \> \href{mailto:\varEmail}{\varEmail} \\
+{Mobile}  \> \varMobile \\
+\end{tabbing}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\education{}
+\begin{list}{}%
+         {\setlength{\leftmargin}{0.19\linewidth}}%
+         \item[]%
+{\small{\color{gray}\varEducationInfo{}}}
+\end{list}
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Professional Experience}
+
+\professional{}
+
+%----------------------------------------------------------------------------------------
+%	EXTRACURRICULAR
+%----------------------------------------------------------------------------------------
+
+\section{Extracurricular Activities}
+
+\extracurricular{}
+
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+
+\interests{}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
