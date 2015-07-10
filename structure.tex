@@ -52,7 +52,9 @@ SmallCapsFeatures = {Letters = SmallCaps}
 \titleformat{\section}{\normalfont\large}{\thesection}{0.1em}{}[{\titlerule[0.8pt]}]
 \titlespacing{\section}{0pt}{30pt}{5pt}
 
-\fancypagestyle{plain}{\fancyhf{}\cfoot{\thepage\ / \pageref{LastPage}}} % Define a custom page style
+\fancypagestyle{plain}{\fancyhf{} % custom page style
+	\lfoot{\color{darkgray}\theauthor} % left foot: author
+	\rfoot{\color{darkgray}\thepage\ / \pageref{LastPage}}} % right foot: page number
 \pagestyle{plain} % Use the custom page style through the document
 \renewcommand{\headrulewidth}{0pt} % Disable the default header rule
 \renewcommand{\footrulewidth}{0pt} % Disable the default footer rule
