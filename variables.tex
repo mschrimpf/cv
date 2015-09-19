@@ -1,0 +1,29 @@
+\newcommand{\varAddress}{}
+\newcommand{\setAddress}[1]{\renewcommand{\varAddress}{#1}}
+
+\newcommand{\varEmail}{}
+\newcommand{\setEmail}[1]{\renewcommand{\varEmail}{#1}}
+
+\newcommand{\varMobile}{}
+\newcommand{\setMobile}[1]{\renewcommand{\varMobile}{#1}}
+
+\newcommand{\varGithub}{}
+\newcommand{\setGithub}[1]{% optional
+  \DoIfNotEmpty{#1}
+    {\renewcommand{\varGithub}{#1}}%
+  }
+
+% helper
+% from http://tex.stackexchange.com/a/44938/39530
+\makeatletter
+\newcommand{\DoIfNotEmpty}[1]{%
+  \begingroup
+  \sbox0{#1}%
+  \ifdim\wd0=\z@
+    \endgroup
+    \expandafter\@gobble
+  \else
+    \endgroup
+    \expandafter\@firstofone
+  \fi}
+\makeatother

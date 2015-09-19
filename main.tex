@@ -1,31 +1,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Wilson Resume/CV
-% XeLaTeX Template
-% Version 1.0 (22/1/2015)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Howard Wilson (https://github.com/watsonbox/cv_template_2004) with
-% extensive modifications by Vel (vel@latextemplates.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Template by Martin Schrimpf <martin.schrimpf@outlook.com>
+% 
+% Adapted from Wilson Resume/CV on http://www.LaTeXTemplates.com 
+% (License: CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0))
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \documentclass[12pt]{report} % Default font size
 
-\input{structure.tex} % Include the file specifying document layout
+\input{structure.tex}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
+
+\input{variables.tex}
 
 \input{content.tex}
 
@@ -36,9 +26,11 @@
 
 \begin{tabbing}
 \hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
-{Address} \> \varAddress\\
-{E-Mail}  \> \href{mailto:\varEmail}{\varEmail} \\
-{Mobile}  \> \varMobile \\
+Address \> \varAddress\\
+E-Mail  \> \href{mailto:\varEmail}{\varEmail} \\
+Mobile  \> \varMobile \\
+\DoIfNotEmpty{\varGithub}
+{GitHub \> \href{\varGithub}{\varGithub} \\}%
 \end{tabbing}
 
 
@@ -49,6 +41,7 @@
 \section{Education}
 
 \education{}
+% Additional information (indented and unobtrusive font)
 \begin{list}{}%
          {\setlength{\leftmargin}{0.19\linewidth}}%
          \item[]%
