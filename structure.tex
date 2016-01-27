@@ -16,6 +16,8 @@
 
 \usepackage{xcolor} % Coloring of text
 
+\usepackage{amssymb} % More symbols
+
 \setcounter{secnumdepth}{0} % Suppress section numbering
 
 \usepackage[ngerman,english]{babel}
@@ -61,6 +63,10 @@ SmallCapsFeatures = {Letters = SmallCaps}
 \setlength{\smallertextwidth}{\textwidth}
 \addtolength{\smallertextwidth}{-2cm}
 
+% Setup table
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
 
 \input{trim_spaces.tex}
 
@@ -77,9 +83,6 @@ SmallCapsFeatures = {Letters = SmallCaps}
 %----------------------------------------------------------------------------------------
 %	BLOCK COMMAND
 %----------------------------------------------------------------------------------------
-
-\usepackage{array}
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \NewDocumentCommand{\block}{
 m % 1: Time frame start
@@ -118,6 +121,48 @@ O{} % 6: Technologies
 \makeatother
 \end{tabular}
 \end{tabular}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION COMMAND
+%----------------------------------------------------------------------------------------
+
+\NewDocumentCommand{\educationblock}{
+m % 1: Time frame start
+O{} % 2: Time frame end
+m % 3: Program
+O{} % 4: Organisation
+O{} % 5: Description
+O{} % 6: Technologies
+O{} % 7: Grade
+}{%
+\block%
+{#1}%
+[#2]%
+{#3}%
+[%
+\ifthenelse{\isempty{#7}}%
+{#4}%
+{#4, #7}%
+]%
+[#5]%
+[#6]%
+}
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGE COMMAND
+%----------------------------------------------------------------------------------------
+
+\newcommand{\languageproficiency}[2]
+% 1: Language
+% 2: Proficiency
+{%
+\textbf{#1}
+\\
+#2
+\\
 }
 
 
