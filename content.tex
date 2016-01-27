@@ -23,24 +23,38 @@
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 \newcommand{\education}{%
-\block%
+\educationblock%
 {% 1: Time frame start
-Since 10/2014
+From 04/2016
 }[% 2: Time frame end
+]{% 3: Program
+Master's Thesis
+}[% 4: University
+Harvard University
+][% 5: Description
+Combination of computational models, neurophysiological recordings and behavior experiments to further the understanding of high level cognition at the Kreiman Lab
+][% 6: Technologies
+]
+
+\educationblock%
+{% 1: Time frame start
+10/2014
+}[% 2: Time frame end
+10/2016
 ]{% 3: Program
 Elite Master's Program Software Engineering
 }[% 4: University
 \\ 
 TU Munich, LMU Munich and University of Augsburg
 ][% 5: Description
-Elite Graduate Program for a small group of students with a focus on the areas Formal Methods, Project Management, Distributed Systems, Databases, Human Computer Interaction and soft-skills 
-\\
-(average grade 1.2)
+Elite Graduate Program for a small group of students with a focus on the areas Formal Methods, Project Management, Distributed Systems, Databases, Human Computer Interaction and soft-skills
 ][% 6: Technologies
 Java, C++, SQL, QVTO, Maude, CTL, LTL
+][% 7: Grade
+$\varnothing 1.2$
 ]
 
-\block%
+\educationblock%
 {% 1: Time frame start
 07/2014
 }[% 2: Time frame end
@@ -50,12 +64,15 @@ Study Abroad
 }[% 4: University
 Auckland University of Technology
 ][% 5: Description
-Courses in Artificial Intelligence, Leadership, Organizational Behavior and Highly Secure Systems  (average grade 1.2)
+Courses in Artificial Intelligence, Leadership, Organizational Behavior and Highly Secure Systems.
+Project on a novel landmark-based approach to perceptual mapping at CAIR
 ][% 6: Technologies
 C++, ARIA, Java
+][% 7: Grade
+$\varnothing 1.2$
 ]
 
-\block%
+\educationblock%
 {% 1: Time frame start
 11/2013
 }[% 2: Time frame end
@@ -67,12 +84,14 @@ University of Sydney and TU Munich
 ][% 5: Description
 Investigation of hardware transactional memory and its effectiveness as a synchronization technique for a database storage component
 \\
-{[}paper in progress{]} (grade 1.0)
+{[}paper in progress{]}
 ][% 6: Technologies
 C++, C, Assembler
+][% 7: Grade
+$1.0$
 ]
 
-\block%
+\educationblock%
 {% 1: Time frame start
 10/2011
 }[% 2: Time frame end
@@ -80,14 +99,14 @@ C++, C, Assembler
 {% 3: Program
 Bachelor’s Program Information Systems
 }[% 4: University
-TU Munich
+TU Munich, $\varnothing 1.4$
 ][% 5: Description
-Combination of economic fundamentals and topics of computer science with reference to Information Systems (average grade 1.4)
+Combination of economic fundamentals and topics of computer science with reference to Information Systems
 ][% 6: Technologies
 Java, SQL, C++
 ]
 
-\block%
+\educationblock%
 {% 1: Time frame start
 10/2009
 }[% 2: Time frame end
@@ -102,7 +121,7 @@ Successful completion of all programming-exercises and the exam
 ][% 6: Technologies
 ]
 
-\block%
+\educationblock%
 {% 1: Time frame start
 2003
 }[% 2: Time frame end
@@ -112,11 +131,13 @@ Abitur
 }[% 4: University
 Gymnasium Dorfen
 ][% 5: Description
-Focus on Mathematics, IT, Economics, English (average grade 1.5)
+Focus on Mathematics, Informatics, Economics, English
 ][% 6: Technologies
+][% 7: Grade
+$\varnothing 1.5$
 ]
 
-\block%
+\educationblock%
 {% 1: Time frame start
 10/2008
 }[% 2: Time frame end
@@ -138,19 +159,19 @@ Experienced the daily American life with a host family and regular school attend
 %	PROFESSIONAL EXPERIENCE
 %----------------------------------------------------------------------------------------
 \newcommand{\professional}{%
-
 \block%
 {% 1: Time frame start
-Since 10/2015
+12/2015
 }[% 2: Time frame end
+04/2016
 ]{% 3: Position
-Research project on swarm-intelligence
+Research Assistant
 }[% 4: Employer
-University of Augsburg
+Oracle Labs
 ][% 5: Description
-3D building survey using multiple quadcopters
+Distributed Systems and Services
 ][% 6: Technologies
-C++, Python
+Linux, Virtual Machines
 ]
 
 \block%
@@ -163,7 +184,7 @@ Software Engineer Intern
 }[% 4: Employer
 Siemens AG
 ][% 5: Description
-Architecture for a behavior-driven development platform that automates the test specification for three major business areas
+Architectural conception and implementation of a behavior-driven development platform that automates the test specification for three major business areas
 ][% 6: Technologies
 Python
 ]
@@ -178,7 +199,7 @@ Technical Project Manager
 }[% 4: Employer
 Greimel IT-Systemhaus GmbH
 ][% 5: Description
-Planned and developed a Document Management System including a financial accounting interface and a dynamic workflow management system on behalf of the Auer Packaging GmbH
+Led the development of a Document Management System including a financial accounting interface and a dynamic workflow management system on behalf of the Auer Packaging GmbH
 ][% 6: Technologies
 Java Services, JavaScript, PHP
 ]
@@ -193,9 +214,25 @@ Web Developer
 }[% 4: Employer
 Promonde JLT
 ][% 5: Description
-Programmed an advertising website for Arabic countries with over 10k users per day and its administration backend
+Programmed an advertising website for Arabic countries with over 10k users per day as well as its administration backend
 ][% 6: Technologies
 CakePHP, JavaScript
+]
+
+\block%
+{% 1: Time frame start
+10/2012
+}[% 2: Time frame end
+09/2013
+]{% 3: Position
+Technical Project Manager
+}[% 4: Employer
+Deutsche Flugsicherung GmbH
+][% 5: Description
+Developed Aerio, a tool that simplifies the preparation of exercises for air traffic controllers and pilots. Functions include synchronization with live flight data, best-route-finding in thousands of waypoints and pre-simulation.
+Unfortunately, the project never went live
+][% 6: Technologies
+Java
 ]
 
 \block%
@@ -251,12 +288,13 @@ Java
 Since 08/2015
 }[% 2: Time frame end
 ]{% 3: Activity
-Technical lead
+Technical Lead
 }[% 4: Organisation
-non-profit project for refugees
+Integreat
 ][% 5: Description
-Android App and administration backend to deliver information from German cities to the refugees
+Platform to deliver information from local authorities and helper organizations to refugees. Implementation of the administration backend and a cross-platform app, later coordination of the development community
 ][% 6: Technologies
+Xamarin (C\#), Android (Java), WordPress (PHP)
 ]
 
 \block%
@@ -319,11 +357,21 @@ English Language Certificate C2/UNIcert level IV
 
 
 %----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+\newcommand{\languages}{
+\languageproficiency{German}{Native proficiency}
+\languageproficiency{English}{Full professional proficiency}
+\languageproficiency{Japanese}{Elementary proficiency}
+\languageproficiency{French}{Elementary proficiency}
+}
+
+
+%----------------------------------------------------------------------------------------
 %	INTERESTS
 %----------------------------------------------------------------------------------------
 \newcommand{\interests}{
 \interest{Travelling}{Insights into various cultures in places such as Africa, Australia and India}
 \interest{Martial Arts}{Sporty balance, perfection of techniques and meditation with Judo and Shaolin}
-\interest{New Technologies /Programming}{Development of a Raspberry Pi program similar to the personal assistant Jarvis from the movie Iron Man.
-Simulation of the autonomous formation flight of quadcopters}
+\interest{Brain-inspired Computing}{Getting behind the concepts of cognition and intelligence on the basis of biological findings}
 }
