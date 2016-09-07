@@ -8,35 +8,39 @@
 %	PERSONAL
 %----------------------------------------------------------------------------------------
 \setAddress{%
-	Paul-Heyse-Straße 21\\
-	\> 80336 München\\
+	Oberhausmehring 16\\
+	\> 84405 Dorfen\\
 	\> Germany}
 \setEmail{%
 	martin.schrimpf@tum.de}
 \setMobile{%
 	+49 174 9946449}
 \setGithub{%
-	https://github.com/Meash}
+	https://github.com/mschrimpf}
 
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 \newcommand{\education}{%
-\block%
+\educationblock%
 {% 1: Time frame start
-From 04/2016
+04/2016
 }[% 2: Time frame end
+11/2016
 ]{% 3: Program
 Master's Thesis
 }[% 4: University
-Harvard University
+Kreiman Lab, Harvard University
 ][% 5: Description
-Combination of computational models, neurophysiological recordings and behavior experiments to further the understanding of high level cognition at the Kreiman Lab
+Research at the bridge of machine learning, neuroscience and psychology with a focus on the role of recurrent connections.
+We improved object detection performance on occluded objects from 45\% with Alexnet to 74\% with our models and offered a first possible application of recurrency in the human brain.
+A follow-up project focuses on the role of scene context for object detection
 ][% 6: Technologies
+Python, Matlab, Linux
 ]
 
-\block%
+\educationblock%
 {% 1: Time frame start
 10/2014
 }[% 2: Time frame end
@@ -47,14 +51,14 @@ Elite Master's Program Software Engineering
 \\ 
 TU Munich, LMU Munich and University of Augsburg
 ][% 5: Description
-Elite Graduate Program for a small group of students with a focus on the areas Formal Methods, Project Management, Distributed Systems, Databases, Human Computer Interaction and soft-skills 
-\\
-(average grade 1.2)
+Elite Graduate Program for a small group of students with a focus on the areas Formal Methods, Project Management, Distributed Systems, Databases, Human Computer Interaction and soft-skills
 ][% 6: Technologies
 Java, C++, SQL, QVTO, Maude, CTL, LTL
+][% 7: Grade
+$\varnothing 1.1$
 ]
 
-\block%
+\educationblock%
 {% 1: Time frame start
 07/2014
 }[% 2: Time frame end
@@ -64,12 +68,15 @@ Study Abroad
 }[% 4: University
 Auckland University of Technology
 ][% 5: Description
-Courses in Artificial Intelligence, Leadership, Organizational Behavior and Highly Secure Systems  (average grade 1.2)
+Courses in Artificial Intelligence, Leadership, Organizational Behavior and Highly Secure Systems.
+Project on a novel landmark-based approach to perceptual mapping (SLAM) at CAIR
 ][% 6: Technologies
 C++, ARIA, Java
+][% 7: Grade
+$\varnothing 1.2$
 ]
 
-\block%
+\educationblock%
 {% 1: Time frame start
 11/2013
 }[% 2: Time frame end
@@ -80,13 +87,13 @@ Bachelor’s Thesis "Scalable Database Concurrency Control using Transactional M
 University of Sydney and TU Munich
 ][% 5: Description
 Investigation of hardware transactional memory and its effectiveness as a synchronization technique for a database storage component
-\\
-{[}paper in progress{]} (grade 1.0)
 ][% 6: Technologies
-C++, C, Assembler
+C++, C, Assembly
+][% 7: Grade
+$1.0$
 ]
 
-\block%
+\educationblock%
 {% 1: Time frame start
 10/2011
 }[% 2: Time frame end
@@ -94,29 +101,14 @@ C++, C, Assembler
 {% 3: Program
 Bachelor’s Program Information Systems
 }[% 4: University
-TU Munich
+TU Munich, $\varnothing 1.4$
 ][% 5: Description
-Combination of economic fundamentals and topics of computer science with reference to Information Systems (average grade 1.4)
+Combination of economic fundamentals and computer science with a focus on Information Systems
 ][% 6: Technologies
 Java, SQL, C++
 ]
 
-\block%
-{% 1: Time frame start
-10/2009
-}[% 2: Time frame end
-02/2010]
-{% 3: Program
-Pupil Program "Introduction to computer science"
-}[% 4: University
-LMU Munich
-][% 5: Description
-First insights into basic algorithms and calculus. 
-Successful completion of all programming-exercises and the exam
-][% 6: Technologies
-]
-
-\block%
+\educationblock%
 {% 1: Time frame start
 2003
 }[% 2: Time frame end
@@ -126,11 +118,13 @@ Abitur
 }[% 4: University
 Gymnasium Dorfen
 ][% 5: Description
-Focus on Mathematics, IT, Economics, English (average grade 1.5)
+Focus on Mathematics, Computer Science, Economics, English
 ][% 6: Technologies
+][% 7: Grade
+$\varnothing 1.5$
 ]
 
-\block%
+\educationblock%
 {% 1: Time frame start
 10/2008
 }[% 2: Time frame end
@@ -162,8 +156,9 @@ Research Assistant
 }[% 4: Employer
 Oracle Labs
 ][% 5: Description
+Developed an on-demand database module for the computing cluster that is now used by numerous research teams
 ][% 6: Technologies
-Linux, Virtual Machines
+Linux, LSF, Virtual Machines
 ]
 
 \block%
@@ -172,11 +167,11 @@ Linux, Virtual Machines
 }[% 2: Time frame end
 10/2015
 ]{% 3: Position
-Software Engineer Intern
+Software Engineering Intern
 }[% 4: Employer
 Siemens AG
 ][% 5: Description
-Architecture for a behavior-driven development platform that automates the test specification for three major business areas
+Architectural concept and implementation of a behavior-driven testing framework that can run a test specification written in natural language and that is now used in three major business areas
 ][% 6: Technologies
 Python
 ]
@@ -185,59 +180,22 @@ Python
 {% 1: Time frame start
 07/2012
 }[% 2: Time frame end
-03/2014
-]{% 3: Position
-Technical Project Manager
-}[% 4: Employer
-Greimel IT-Systemhaus GmbH
-][% 5: Description
-Planned and developed a Document Management System including a financial accounting interface and a dynamic workflow management system on behalf of the Auer Packaging GmbH
-][% 6: Technologies
-Java Services, JavaScript, PHP
-]
-
-\block%
-{% 1: Time frame start
-10/2012
-}[% 2: Time frame end
-09/2013
-]{% 3: Position
-Web Developer
-}[% 4: Employer
-Promonde JLT
-][% 5: Description
-Programmed an advertising website for Arabic countries with over 10k users per day and its administration backend
-][% 6: Technologies
-CakePHP, JavaScript
-]
-
-\block%
-{% 1: Time frame start
-07/2012
-}[% 2: Time frame end
+12/2015
 ]{% 3: Position
 Foundation of Martin Schrimpf Software Solutions
 }[% 4: Employer
 ][% 5: Description
-Software Development and Services, focus on process optimization
+Software Development and Services - projects include:
+\begin{description}[noitemsep,topsep=0pt,font=\normalfont\itshape\space]
+\item[Greimel IT-Systemhaus GmbH] Led the development of a Document Management System including a financial accounting interface and a dynamic workflow management system
+\item[R-Backup Datensicherung GmbH] Developed a multilingual website’s front- and backend to administrate partners and customers and to issue invoices
+\item[Deutsche Flugsicherung GmbH] Developed a tool for exercise preparation, containing best-route-finding in thousands of waypoints and pre-simulation of the entire exercise.
+The project unfortunately never went live due to contract constraints
+\item[Promonde JLT] Developed an advertisement website for Arabic countries with over 10k users per day
+\end{description}
 ][% 6: Technologies
+Java, JavaScript, PHP
 ]
-
-\block%
-{% 1: Time frame start
-01/2012
-}[% 2: Time frame end
-04/2012
-]{% 3: Position
-Web Developer
-}[% 4: Employer
-R-Backup Datensicherung GmbH
-][% 5: Description
-Developed a multilingual website’s front- and backend to administrate partners and customers and to issue invoices
-][% 6: Technologies
-JavaScript, PHP
-]
-
 }
 
 
@@ -247,15 +205,29 @@ JavaScript, PHP
 \newcommand{\extracurricular}{%
 \block%
 {% 1: Time frame start
+02/2016
+}[% 2: Time frame end
+]{% 3: Activity
+Artificial Intelligence Workshop
+}[% 4: Organisation
+][% 5: Description
+Organized a two-day workshop on Neural Networks, Machine Learning and Organic Computing. The speakers were Prof. Günther Palm, PD Rolf Würtz and Dr. Joschka Bödecker
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
 Since 08/2015
 }[% 2: Time frame end
 ]{% 3: Activity
-Technical lead
+Technical Lead
 }[% 4: Organisation
-non-profit project for refugees
+Integreat
 ][% 5: Description
-Android App and administration backend to deliver information from German cities to the refugees
+Platform to deliver information from local authorities and helper organizations to refugees in over 80 German cities.
+Implementation of the administration backend and a cross-platform app, later coordination of the development community
 ][% 6: Technologies
+Xamarin (C\#), Android (Java), WordPress (PHP)
 ]
 
 \block%
@@ -266,7 +238,18 @@ Android App and administration backend to deliver information from German cities
 Deutschlandstipendium
 }[% 4: Organisation
 ][% 5: Description
-Achievement-oriented scholarship
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+201\{5,6\}
+}[% 2: Time frame end
+]{% 3: Activity
+MINGA Mentor for International Students
+}[% 4: Organisation
+TU Munich
+][% 5: Description
 ][% 6: Technologies
 ]
 
@@ -278,13 +261,13 @@ Since 10/2013
 Rotaract Club München Residenz
 }[% 4: Organisation
 ][% 5: Description
-Youth club of Rotary, based on three pillars: community, help, learn. Active participation in social initiatives, e.g. gingerbread house baking with our orphanage sponsorship
+Youth club of Rotary, based on the community, helping and learning. Social initiatives, e.g. with our orphanage sponsorship
 ][% 6: Technologies
 ]
 
 \block%
 {% 1: Time frame start
-2013,14,15
+201\{3,4,5,6\}
 }[% 2: Time frame end
 ]{% 3: Activity
 e-fellows.net scholarship
@@ -314,13 +297,4 @@ English Language Certificate C2/UNIcert level IV
 ][% 5: Description
 ][% 6: Technologies
 ]
-}
-
-
-%----------------------------------------------------------------------------------------
-%	INTERESTS
-%----------------------------------------------------------------------------------------
-\newcommand{\interests}{
-\interest{Travelling}{Insights into various cultures in places such as Africa, Australia and India}
-\interest{Martial Arts}{Sporty balance, perfection of techniques and meditation with Judo and Shaolin}
 }
