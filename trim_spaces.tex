@@ -1,0 +1,35 @@
+% from Joseph Wright, http://tex.stackexchange.com/a/69771/39530
+\makeatletter
+\long\def\trim@spaces#1{%
+  \@@trim@spaces{\q@mark#1}%
+}
+\def\@tempa#1{%
+  \long\def\@@trim@spaces##1{%
+    \@@trim@spaces@i##1\q@nil\q@mark#1{}\q@mark
+      \@@trim@spaces@ii
+      \@@trim@spaces@iii
+      #1\q@nil
+      \@@trim@spaces@iv
+      \q@stop
+  }%
+  \long\def\@@trim@spaces@i##1\q@mark#1##2\q@mark##3{%
+    ##3%
+    \@@trim@spaces@i
+    \q@mark
+    ##2%
+    \q@mark#1{##1}%
+  }%
+  \long\def\@@trim@spaces@ii\@@trim@spaces@i\q@mark\q@mark##1{%
+    \@@trim@spaces@iii
+    ##1%
+  }%
+  \long\def\@@trim@spaces@iii##1#1\q@nil##2{%
+    ##2%
+    ##1\q@nil
+    \@@trim@spaces@iii
+  }%
+  \long\def\@@trim@spaces@iv##1\q@nil##2\q@stop{%
+    \unexpanded\expandafter{\@gobble##1}%
+  }%  
+}
+\@tempa{ }

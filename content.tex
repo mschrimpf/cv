@@ -8,9 +8,9 @@
 %	PERSONAL
 %----------------------------------------------------------------------------------------
 \setAddress{%
-	Oberhausmehring 16\\
-	\> 84405 Dorfen\\
-	\> Germany}
+	Oberhausmehring 16\\%
+	84405 Dorfen\\%
+	Germany}
 \setEmail{%
 	martin.schrimpf@tum.de}
 \setMobile{%
@@ -25,23 +25,6 @@
 \newcommand{\education}{%
 \educationblock%
 {% 1: Time frame start
-04/2016
-}[% 2: Time frame end
-11/2016
-]{% 3: Program
-Master's Thesis
-}[% 4: University
-Kreiman Lab, Harvard University
-][% 5: Description
-Research at the bridge of machine learning, neuroscience and psychology with a focus on the role of recurrent connections.
-We improved object detection performance on occluded objects from 45\% with Alexnet to 74\% with our models and offered a first possible application of recurrency in the human brain.
-A follow-up project focuses on the role of scene context for object detection
-][% 6: Technologies
-Python, Matlab, Linux
-]
-
-\educationblock%
-{% 1: Time frame start
 10/2014
 }[% 2: Time frame end
 10/2016
@@ -51,7 +34,9 @@ Elite Master's Program Software Engineering
 \\ 
 TU Munich, LMU Munich and University of Augsburg
 ][% 5: Description
-Elite Graduate Program for a small group of students with a focus on the areas Formal Methods, Project Management, Distributed Systems, Databases, Human Computer Interaction and soft-skills
+Elite Graduate Program for a small group of students with a focus on the areas Formal Methods, Project Management, Distributed Systems, Databases, Human Computer Interaction and soft-skills.
+\\
+\subprogram{Master's Thesis} at the \organization{University of Sydney}: Investigation of hardware transactional memory and its effectiveness as a synchronization technique for databases, graded $1.0$.
 ][% 6: Technologies
 Java, C++, SQL, QVTO, Maude, CTL, LTL
 ][% 7: Grade
@@ -60,52 +45,22 @@ $\varnothing 1.1$
 
 \educationblock%
 {% 1: Time frame start
-07/2014
-}[% 2: Time frame end
-11/2014]
-{% 3: Program
-Study Abroad
-}[% 4: University
-Auckland University of Technology
-][% 5: Description
-Courses in Artificial Intelligence, Leadership, Organizational Behavior and Highly Secure Systems.
-Project on a novel landmark-based approach to perceptual mapping (SLAM) at CAIR
-][% 6: Technologies
-C++, ARIA, Java
-][% 7: Grade
-$\varnothing 1.2$
-]
-
-\educationblock%
-{% 1: Time frame start
-11/2013
-}[% 2: Time frame end
-07/2014]
-{% 3: Program
-Bachelor’s Thesis "Scalable Database Concurrency Control using Transactional Memory"
-}[% 4: University
-University of Sydney and TU Munich
-][% 5: Description
-Investigation of hardware transactional memory and its effectiveness as a synchronization technique for a database storage component
-][% 6: Technologies
-C++, C, Assembly
-][% 7: Grade
-$1.0$
-]
-
-\educationblock%
-{% 1: Time frame start
 10/2011
 }[% 2: Time frame end
 07/2014]
 {% 3: Program
-Bachelor’s Program Information Systems
+Bachelor's Program Information Systems
 }[% 4: University
 TU Munich, $\varnothing 1.4$
 ][% 5: Description
-Combination of economic fundamentals and computer science with a focus on Information Systems
+Combination of economic fundamentals and computer science with a focus on Information Systems.
+\\
+\subprogram{Bachelor's Thesis} at the \organization{University of Sydney}: Investigation of hardware transactional memory and its effectiveness as a synchronization technique for databases, graded $1.0$.
+\\
+\subprogram{Study Abroad} at the \organization{Auckland University of Technology}: Courses in Artificial Intelligence and Management.
+Project on a novel landmark-based approach to perceptual mapping (SLAM) at CAIR
 ][% 6: Technologies
-Java, SQL, C++
+Java, UML, SQL, C++, C, Assembly, ARIA
 ]
 
 \educationblock%
@@ -118,23 +73,8 @@ Abitur
 }[% 4: University
 Gymnasium Dorfen
 ][% 5: Description
-Focus on Mathematics, Computer Science, Economics, English
-][% 6: Technologies
-][% 7: Grade
-$\varnothing 1.5$
-]
-
-\educationblock%
-{% 1: Time frame start
-10/2008
-}[% 2: Time frame end
-12/2008]
-{% 3: Program
-USA-exchange
-}[% 4: University
-C.D. Hylton High school, Virginia
-][% 5: Description
-Experienced the daily American life with a host family and regular school attendance
+Focus on Mathematics, Computer Science, Economics, English.
+\subprogram{USA-exchange} with the \organization{C.D. Hylton High school} in Virginia
 ][% 6: Technologies
 ]
 }
@@ -143,9 +83,26 @@ Experienced the daily American life with a host family and regular school attend
 
 
 %----------------------------------------------------------------------------------------
-%	PROFESSIONAL EXPERIENCE
+%	EXPERIENCE
 %----------------------------------------------------------------------------------------
 \newcommand{\professional}{%
+\block%
+{% 1: Time frame start
+04/2016
+}[% 2: Time frame end
+11/2016
+]{% 3: Position
+Research Assistant
+}[% 4: Employer
+Kreiman Lab, Harvard University
+][% 5: Description
+Research at the bridge of machine learning, neuroscience and psychology with a focus on the role of recurrent connections.
+We improved object detection performance on occluded objects from 45\% with Alexnet to 74\% with our models and offered a first possible application of recurrency in the human brain [paper submitted].
+A follow-up project focuses on the role of scene context for object detection
+][% 6: Technologies
+Matlab, Python, keras, Theano, Linux, ECoG
+]
+
 \block%
 {% 1: Time frame start
 12/2015
@@ -156,7 +113,7 @@ Research Assistant
 }[% 4: Employer
 Oracle Labs
 ][% 5: Description
-Developed an on-demand database module for the computing cluster that is now used by numerous research teams
+Developed an on-demand database module for the computing cluster that is now used by internal research teams
 ][% 6: Technologies
 Linux, LSF, Virtual Machines
 ]
@@ -182,19 +139,171 @@ Python
 }[% 2: Time frame end
 12/2015
 ]{% 3: Position
-Foundation of Martin Schrimpf Software Solutions
+Freelancer
 }[% 4: Employer
+Martin Schrimpf Software Solutions
 ][% 5: Description
 Software Development and Services - projects include:
 \begin{description}[noitemsep,topsep=0pt,font=\normalfont\itshape\space]
-\item[Greimel IT-Systemhaus GmbH] Led the development of a Document Management System including a financial accounting interface and a dynamic workflow management system
-\item[R-Backup Datensicherung GmbH] Developed a multilingual website’s front- and backend to administrate partners and customers and to issue invoices
+\item[Greimel IT-Systemhaus GmbH] Led the development of a Document Management System including optical character recognition (OCR), a financial accounting interface and a dynamic workflow management system
+\item[R-Backup Datensicherung GmbH] Developed a multilingual website's front- and backend to administrate partners and customers and to issue invoices
 \item[Deutsche Flugsicherung GmbH] Developed a tool for exercise preparation, containing best-route-finding in thousands of waypoints and pre-simulation of the entire exercise.
 The project unfortunately never went live due to contract constraints
 \item[Promonde JLT] Developed an advertisement website for Arabic countries with over 10k users per day
 \end{description}
 ][% 6: Technologies
 Java, JavaScript, PHP
+]
+}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\newcommand{\publications}{%
+\block%
+{% 1: Time frame start
+2016
+}[% 2: Time frame end
+]{% 3: Activity
+}[% 4: Organisation
+][% 5: Description
+\vspace{-8pt} % this is horrible but the bibentry command seems to generate some vertical distance and I don't know how to remove it
+\bibentry{recurrency_occlusion}
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+2016
+}[% 2: Time frame end
+]{% 3: Activity
+}[% 4: Organisation
+][% 5: Description
+\vspace{-8pt}
+\bibentry{should_i_use_tensorflow}
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+2014
+}[% 2: Time frame end
+]{% 3: Activity
+}[% 4: Organisation
+][% 5: Description
+\vspace{-8pt}
+\bibentry{bachelors_thesis}
+][% 6: Technologies
+]
+}
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATIONS
+%----------------------------------------------------------------------------------------
+\newcommand{\presentations}{%
+\block%
+{% 1: Time frame start
+2016
+}[% 2: Time frame end
+]{% 3: Activity
+Presentation
+}[% 4: Organisation
+NIPS Brains \& Bits
+][% 5: Description
+Recurrent computations for pattern completion
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+2016
+}[% 2: Time frame end
+]{% 3: Activity
+Presentation
+}[% 4: Organisation
+Harvard Systems Club
+][% 5: Description
+Recurrent computations for pattern completion
+][% 6: Technologies
+]
+}
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+\newcommand{\awards}{%
+\block%
+{% 1: Time frame start
+2016
+}[% 2: Time frame end
+]{% 3: Activity
+FITweltweit
+}[% 4: Organisation
+DAAD German Academic Exchange Service
+][% 5: Description
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+2016
+}[% 2: Time frame end
+]{% 3: Activity
+Teilstipendium
+}[% 4: Organisation
+University Augsburg
+][% 5: Description
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+2016
+}[% 2: Time frame end
+]{% 3: Activity
+Winner Social Society
+}[% 4: Organisation
+Idea- and Startup-competition Generation-D
+][% 5: Description
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+2015
+}[% 2: Time frame end
+]{% 3: Activity
+Deutschlandstipendium
+}[% 4: Organisation
+Federal Ministry for Education and Research, Roland und Ute Lacher Fonds
+][% 5: Description
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+2014
+}[% 2: Time frame end
+]{% 3: Activity
+Ministeriumsstipendium
+}[% 4: Organisation
+Bavarian State Ministry for Education, Science and the Arts
+][% 5: Description
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+201\{3,4,5,6\}
+}[% 2: Time frame end
+]{% 3: Activity
+e-fellows.net scholarship
+}[% 4: Organisation
+][% 5: Description
+][% 6: Technologies
 ]
 }
 
@@ -220,7 +329,7 @@ Organized a two-day workshop on Neural Networks, Machine Learning and Organic Co
 Since 08/2015
 }[% 2: Time frame end
 ]{% 3: Activity
-Technical Lead
+Co-Founder and Technical Lead
 }[% 4: Organisation
 Integreat
 ][% 5: Description
@@ -228,17 +337,6 @@ Platform to deliver information from local authorities and helper organizations 
 Implementation of the administration backend and a cross-platform app, later coordination of the development community
 ][% 6: Technologies
 Xamarin (C\#), Android (Java), WordPress (PHP)
-]
-
-\block%
-{% 1: Time frame start
-2015
-}[% 2: Time frame end
-]{% 3: Activity
-Deutschlandstipendium
-}[% 4: Organisation
-][% 5: Description
-][% 6: Technologies
 ]
 
 \block%
@@ -264,36 +362,87 @@ Rotaract Club München Residenz
 Youth club of Rotary, based on the community, helping and learning. Social initiatives, e.g. with our orphanage sponsorship
 ][% 6: Technologies
 ]
+}
+
+
+%----------------------------------------------------------------------------------------
+%	ADVISED STUDENTS
+%----------------------------------------------------------------------------------------
+\newcommand{\advisedstudents}{%
+\block%
+{% 1: Time frame start
+2016
+}[% 2: Time frame end
+]{% 3: who
+Jacklyn Sarette
+}[% 4: Organisation
+Emmanuel College
+][% 5: Description
+Behavioral experiments on visual context
+][% 6: Technologies
+]
 
 \block%
 {% 1: Time frame start
-201\{3,4,5,6\}
+2016
 }[% 2: Time frame end
-]{% 3: Activity
-e-fellows.net scholarship
+]{% 3: who
+Doré de Morsier
 }[% 4: Organisation
+ETH Zurich
+][% 5: Description
+Behavioral experiments on the recognition of novel objects
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+2016
+}[% 2: Time frame end
+]{% 3: who
+Wendy Fernandez
+}[% 4: Organisation
+City University of New York
+][% 5: Description
+Behavioral experiments and data analysis on the identification of occluded objects
+][% 6: Technologies
+]
+}
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+\newcommand{\references}{%
+\block%
+{% 1: Time frame start
+}[% 2: Time frame end
+]{% 3: who
+Prof. Gabriel Kreiman, PhD
+}[% 4: Organisation
+Children’s Hospital Boston, Harvard Medical School
 ][% 5: Description
 ][% 6: Technologies
 ]
 
 \block%
 {% 1: Time frame start
-10/2012
 }[% 2: Time frame end
-]{% 3: Activity
-SAP Certified Business Associate with SAP ERP 6.0
+]{% 3: who
+Prof. Uwe Röhm, PhD
 }[% 4: Organisation
+School of IT, University of Sydney
 ][% 5: Description
 ][% 6: Technologies
 ]
 
 \block%
 {% 1: Time frame start
-10/2012
 }[% 2: Time frame end
-]{% 3: Activity
-English Language Certificate C2/UNIcert level IV
+]{% 3: who
+Prof. Dr. Helmut Krcmar
 }[% 4: Organisation
+Computer science in economics, Technical University Munich
 ][% 5: Description
 ][% 6: Technologies
 ]

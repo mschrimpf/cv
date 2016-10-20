@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% Template by Martin Schrimpf <martin.schrimpf@outlook.com>
+% 
+% Adapted from Wilson Resume/CV on http://www.LaTeXTemplates.com 
+% (License: CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0))
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{report} % Default font size
+
+\input{structure.tex}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\input{variables.tex}
+
+\input{content.tex}
+
+\nobibliography{bibliography}
+
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.45\textwidth}
+\begin{tabbing}
+\hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
+E-Mail  \> \href{mailto:\varEmail}{\varEmail} \\
+Mobile  \> \varMobile \\
+\DoIfNotEmpty{\varGithub}
+{GitHub \> \href{\varGithub}{\varGithub} \\}%
+\end{tabbing}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}%
+\varAddress \\%
+\end{minipage}%
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\education{}
+% Additional information (indented and unobtrusive font)
+\begin{list}{}%
+         {\setlength{\leftmargin}{0.19\linewidth}}%
+         \item[]%
+{\small{\color{gray}\varEducationInfo{}}}
+\end{list}
+
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\professional{}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\ifcsname publications\endcsname%
+\section{Publications}
+\publications{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATIONS
+%----------------------------------------------------------------------------------------
+
+\ifcsname presentations\endcsname%
+\section{Presentations}
+\presentations{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\ifcsname awards\endcsname%
+\section{Awards}
+\awards{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	EXTRACURRICULAR
+%----------------------------------------------------------------------------------------
+
+\ifcsname extracurricular\endcsname%
+\section{Extracurricular Activities}
+\extracurricular{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	ADVISED STUDENTS
+%----------------------------------------------------------------------------------------
+
+\ifcsname advisedstudents\endcsname%
+\section{Advised Students}
+\advisedstudents{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+
+\ifcsname languages\endcsname%
+\section{Languages}
+\languages{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS
+%----------------------------------------------------------------------------------------
+
+\ifcsname interests\endcsname%
+\section{Interests}
+\interests{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\ifcsname references\endcsname%
+\section{References}
+\references{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
