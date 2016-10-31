@@ -66,6 +66,8 @@
 
 \usepackage[outline]{contour}% http://ctan.org/pkg/contour
 
+\usepackage{xstring} % string length
+
 
 \input{trim_spaces.tex}
 
@@ -88,7 +90,15 @@
 \begin{tabular}{p{0.15\linewidth} l}%
 \ifthenelse{\isempty{#2}}%
 {#1}%
-{\begin{tabular}[t]{@{}l@{}}#1\\ - #2\end{tabular}}%
+{%
+\begin{tabular}[t]{@{}l@{}}%
+#1%
+\StrLen{#1}[\fromstringlen]%
+\ifthenelse{\fromstringlen > 5}{\\}{}%
+ - %
+#2%
+\end{tabular}%
+}%
 %
 &%
 %
