@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
-% Template by Martin Schrimpf <martin.schrimpf@outlook.com>
+% Template by Martin Schrimpf <www.mschrimpf.com>
 % 
 % Adapted from Wilson Resume/CV on http://www.LaTeXTemplates.com 
 % (License: CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0))
@@ -10,6 +10,8 @@
 \documentclass[12pt]{report} % Default font size
 
 \input{structure.tex}
+
+\addbibresource{bibliography.bib}
 
 %----------------------------------------------------------------------------------------
 
@@ -24,21 +26,26 @@
 %	NAME AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
+\begin{minipage}{0.45\textwidth}
 \begin{tabbing}
 \hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
-Address \> \varAddress\\
 E-Mail  \> \href{mailto:\varEmail}{\varEmail} \\
 Mobile  \> \varMobile \\
-\DoIfNotEmpty{\varGithub}
-{GitHub \> \href{\varGithub}{\varGithub} \\}%
+\DoIfNotEmpty{\varWeb}
+{Web \> \href{\varWeb}{\varWeb} \\}%
 \end{tabbing}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.3\textwidth}%
+\varAddress \\%
+\end{minipage}%
 
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 
-\section{Academic}
+\section{Education}
 
 \education{}
 % Additional information (indented and unobtrusive font)
@@ -48,39 +55,93 @@ Mobile  \> \varMobile \\
 {\small{\color{gray}\varEducationInfo{}}}
 \end{list}
 
+
 %----------------------------------------------------------------------------------------
 %	PROFESSIONAL SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Professional}
-
+\section{Experience}
 \professional{}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\ifcsname publications\endcsname%
+\section{Publications}
+\publications{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATIONS
+%----------------------------------------------------------------------------------------
+
+\ifcsname presentations\endcsname%
+\section{Presentations}
+\presentations{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\ifcsname awards\endcsname%
+\section{Awards}
+\awards{}
+\fi
+
 
 %----------------------------------------------------------------------------------------
 %	EXTRACURRICULAR
 %----------------------------------------------------------------------------------------
 
+\ifcsname extracurricular\endcsname%
 \section{Extracurricular Activities}
-
 \extracurricular{}
+\fi
 
 
 %----------------------------------------------------------------------------------------
 %	LANGUAGES
 %----------------------------------------------------------------------------------------
 
+\ifcsname languages\endcsname%
 \section{Languages}
-
 \languages{}
+\fi
 
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS
 %----------------------------------------------------------------------------------------
 
+\ifcsname interests\endcsname%
 \section{Interests}
-
 \interests{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	ADVISED STUDENTS
+%----------------------------------------------------------------------------------------
+
+\ifcsname advisedstudents\endcsname%
+\section{Mentored Students}
+\advisedstudents{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\ifcsname references\endcsname%
+\section{References}
+\references{}
+\fi
 
 
 %----------------------------------------------------------------------------------------

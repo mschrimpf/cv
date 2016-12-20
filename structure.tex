@@ -4,6 +4,8 @@
 
 \usepackage[a4paper, hmargin=25mm, vmargin=30mm, top=20mm]{geometry} % Use A4 paper and set margins
 
+\usepackage{mathpazo} % Palatino font
+
 \usepackage{titling}
 
 \usepackage{fancyhdr} % Customize the header and footer
@@ -12,7 +14,7 @@
 
 \usepackage{lastpage} % Required for calculating the number of pages in the document
 
-\usepackage{hyperref} % Colors for links, text and headings
+\usepackage[hidelinks]{hyperref} % Colors for links, text and headings
 
 \usepackage{xcolor} % Coloring of text
 
@@ -21,23 +23,15 @@
 \setcounter{secnumdepth}{0} % Suppress section numbering
 
 \usepackage[ngerman,english]{babel}
-%\usepackage[proportional,scaled=1.064]{erewhon} % Use the Erewhon font
-%\usepackage[erewhon,vvarbb,bigdelims]{newtxmath} % Use the Erewhon font
-\usepackage[latin1]{inputenc} % Required for inputting international characters
+\usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
-\usepackage{fontspec} % Required for specification of custom fonts
-\setmainfont[Path = ./fonts/,
-Extension = .otf,
-BoldFont = Erewhon-Bold,
-ItalicFont = Erewhon-Italic,
-BoldItalicFont = Erewhon-BoldItalic,
-SmallCapsFeatures = {Letters = SmallCaps}
-]{Erewhon-Regular}
+% Bibliography
+\usepackage[backend=bibtex, style=ieee, maxcitenames=999, maxbibnames=999]{biblatex}
+\AtEveryCitekey{\clearfield{year}\clearfield{url}} % hide year and url
+
 
 \usepackage{titlesec} % Customization of titles and their spacing
-%\usepackage{sectsty} % Allows customization of titles
-%\sectionfont{\normalfont\sectionrule{0pt}{0pt}{-6pt}{0.8pt}}
 \titleformat{\section}{\normalfont\large}{\thesection}{0.1em}{}[{\titlerule[0.8pt]}]
 \titlespacing{\section}{0pt}{30pt}{5pt}
 
@@ -58,6 +52,9 @@ SmallCapsFeatures = {Letters = SmallCaps}
 \let\tmpunderline\underline
 \renewcommand{\underline}[1]{\tmpunderline{\smash{#1}}}
 
+% allow discarding item separator
+\usepackage{enumitem}
+
 % Text width for tabbing environments
 \newlength{\smallertextwidth}
 \setlength{\smallertextwidth}{\textwidth}
@@ -66,6 +63,10 @@ SmallCapsFeatures = {Letters = SmallCaps}
 % Setup table
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\usepackage[outline]{contour}% http://ctan.org/pkg/contour
+
+\usepackage{xstring} % string length
 
 
 \input{trim_spaces.tex}
@@ -84,19 +85,20 @@ SmallCapsFeatures = {Letters = SmallCaps}
 %	BLOCK COMMAND
 %----------------------------------------------------------------------------------------
 
-\NewDocumentCommand{\block}{
-m % 1: Time frame start
-O{} % 2: Time frame end
-m % 3: Project
-O{} % 4: Organisation
-O{} % 5: Description
-O{} % 6: Technologies
-}{%
+\newcommand{\block}[6]{%
 % left column: time frame
 \begin{tabular}{p{0.15\linewidth} l}%
 \ifthenelse{\isempty{#2}}%
 {#1}%
-{\begin{tabular}[t]{@{}l@{}}#1\\ - #2\end{tabular}}%
+{%
+\begin{tabular}[t]{@{}l@{}}%
+#1%
+\StrLen{#1}[\fromstringlen]%
+\ifthenelse{\fromstringlen > 5}{\\}{}%
+ - %
+#2%
+\end{tabular}%
+}%
 %
 &%
 %
@@ -104,20 +106,25 @@ O{} % 6: Technologies
 \begin{tabular}[t]{@{}l@{}}%
 % header: project, organisation
 \makeatletter%
+\ifthenelse{\NOT \isempty{#3} \OR \NOT \isempty{#4}}{%
 \parbox[t]{0.79\linewidth}{\raggedright %
 	\textbf{\trim@spaces{#3}}%
-	\ifthenelse{\isempty{#4}}%
-	{}%
-	{, \textit{\trim@spaces{#4}}}
+	\ifthenelse{\NOT \isempty{#3} \AND \NOT \isempty{#4}}%
+	{, }{}%
+	\organization{#4}%
 \par}%
+}{}%
+% line break only if headers and description present
+\ifthenelse{\NOT \isempty{#3} \OR \NOT \isempty{#4} \AND \NOT \isempty{#5}}
+{\\}{}%
 % description
-\ifthenelse{\isempty{#5}}%
-{}%
-{\\ \parbox[t]{0.79\linewidth}{\raggedright \trim@spaces{#5}}}%
+\ifthenelse{\NOT \isempty{#5}}%
+{\parbox[t]{0.79\linewidth}{\raggedright \trim@spaces{#5}}}{}%
 % technologies
-\ifthenelse{\isempty{#6}}%
-{}%
-{\\ \underline{Technologies}: #6}%
+\ifthenelse{\NOT \isempty{#6}}{%
+\\
+\underline{Technologies}: #6%
+}{}%
 \makeatother
 \end{tabular}
 \end{tabular}
@@ -125,29 +132,32 @@ O{} % 6: Technologies
 
 
 %----------------------------------------------------------------------------------------
+%	BLOCK COMMAND UTILIES
+%----------------------------------------------------------------------------------------
+
+\newcommand{\organization}[1]{%
+\textit{\trim@spaces{#1}}}%
+
+\newcommand{\subprogram}[1]{%
+\contourlength{0.1pt}\contournumber{10}\contour{black}{\trim@spaces{#1}}}%
+
+
+%----------------------------------------------------------------------------------------
 %	EDUCATION COMMAND
 %----------------------------------------------------------------------------------------
 
-\NewDocumentCommand{\educationblock}{
-m % 1: Time frame start
-O{} % 2: Time frame end
-m % 3: Program
-O{} % 4: Organisation
-O{} % 5: Description
-O{} % 6: Technologies
-O{} % 7: Grade
-}{%
+\newcommand{\educationblock}[7]{%
 \block%
 {#1}%
-[#2]%
+{#2}%
 {#3}%
-[%
+{%
 \ifthenelse{\isempty{#7}}%
 {#4}%
-{#4, #7}%
-]%
-[#5]%
-[#6]%
+{\trim@spaces{#4}, GPA #7}%
+}%
+{#5}%
+{#6}%
 }
 
 
