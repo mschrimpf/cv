@@ -1,20 +1,14 @@
 %----------------------------------------------------------------------------------------
-%	HEADER
-%----------------------------------------------------------------------------------------
-\author{Mux Mastermann}
-\title{\theauthor}
-
-%----------------------------------------------------------------------------------------
 %	PERSONAL
 %----------------------------------------------------------------------------------------
 \setAddress{%
-	My House 11\\
-	\> 12345 My City\\
-	\> My Country}
+	Paul-Heyse-Straße 21\\
+	\> 80336 München\\
+	\> Germany}
 \setEmail{%
-	my.name@email.com}
+	martin.schrimpf@tum.de}
 \setMobile{%
-	+12 345 6789}
+	+49 174 9946449}
 \setGithub{%
 	https://github.com/Meash}
 
@@ -23,18 +17,132 @@
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 \newcommand{\education}{%
-\block%
+\educationblock%
 {% 1: Time frame start
-Since 10/2014
+From 04/2016
 }[% 2: Time frame end
 ]{% 3: Program
-My Study Program
+Master's Thesis
 }[% 4: University
-My University
+Harvard University
 ][% 5: Description
-I learned stuff here (grade 1.3)
+Combination of computational models, neurophysiological recordings and behavior experiments to further the understanding of high level cognition at the Kreiman Lab
 ][% 6: Technologies
-Java, C++
+]
+
+\educationblock%
+{% 1: Time frame start
+10/2014
+}[% 2: Time frame end
+10/2016
+]{% 3: Program
+Elite Master's Program Software Engineering
+}[% 4: University
+\\ 
+TU Munich, LMU Munich and University of Augsburg
+][% 5: Description
+Elite Graduate Program for a small group of students with a focus on the areas Formal Methods, Project Management, Distributed Systems, Databases, Human Computer Interaction and soft-skills
+][% 6: Technologies
+Java, C++, SQL, QVTO, Maude, CTL, LTL
+][% 7: Grade
+$\varnothing 1.2$
+]
+
+\educationblock%
+{% 1: Time frame start
+07/2014
+}[% 2: Time frame end
+11/2014]
+{% 3: Program
+Study Abroad
+}[% 4: University
+Auckland University of Technology
+][% 5: Description
+Courses in Artificial Intelligence, Leadership, Organizational Behavior and Highly Secure Systems.
+Project on a novel landmark-based approach to perceptual mapping at CAIR
+][% 6: Technologies
+C++, ARIA, Java
+][% 7: Grade
+$\varnothing 1.2$
+]
+
+\educationblock%
+{% 1: Time frame start
+11/2013
+}[% 2: Time frame end
+07/2014]
+{% 3: Program
+Bachelor’s Thesis "Scalable Database Concurrency Control using Transactional Memory"
+}[% 4: University
+University of Sydney and TU Munich
+][% 5: Description
+Investigation of hardware transactional memory and its effectiveness as a synchronization technique for a database storage component
+\\
+{[}paper in progress{]}
+][% 6: Technologies
+C++, C, Assembler
+][% 7: Grade
+$1.0$
+]
+
+\educationblock%
+{% 1: Time frame start
+10/2011
+}[% 2: Time frame end
+07/2014]
+{% 3: Program
+Bachelor’s Program Information Systems
+}[% 4: University
+TU Munich, $\varnothing 1.4$
+][% 5: Description
+Combination of economic fundamentals and topics of computer science with reference to Information Systems
+][% 6: Technologies
+Java, SQL, C++
+]
+
+\educationblock%
+{% 1: Time frame start
+10/2009
+}[% 2: Time frame end
+02/2010]
+{% 3: Program
+Pupil Program "Introduction to computer science"
+}[% 4: University
+LMU Munich
+][% 5: Description
+First insights into basic algorithms and calculus. 
+Successful completion of all programming-exercises and the exam
+][% 6: Technologies
+]
+
+\educationblock%
+{% 1: Time frame start
+2003
+}[% 2: Time frame end
+2011]
+{% 3: Program
+Abitur
+}[% 4: University
+Gymnasium Dorfen
+][% 5: Description
+Focus on Mathematics, Informatics, Economics, English
+][% 6: Technologies
+][% 7: Grade
+$\varnothing 1.5$
+]
+
+\educationblock%
+{% 1: Time frame start
+10/2008
+}[% 2: Time frame end
+12/2008]
+{% 3: Program
+USA-exchange
+}[% 4: University
+C.D. Hylton High school, Virginia
+][% 5: Description
+Experienced the daily American life with a host family and regular school attendance
+][% 6: Technologies
 ]
 }
 
@@ -47,31 +155,120 @@ Java, C++
 \newcommand{\professional}{%
 \block%
 {% 1: Time frame start
-10/2012
+12/2015
 }[% 2: Time frame end
-10/2014
+04/2016
 ]{% 3: Position
-Internship
+Research Assistant
 }[% 4: Employer
-My Employer
+Oracle Labs
 ][% 5: Description
-I worked on things and accomplished things
+Distributed Systems and Services
+][% 6: Technologies
+Linux, Virtual Machines
+]
+
+\block%
+{% 1: Time frame start
+07/2015
+}[% 2: Time frame end
+10/2015
+]{% 3: Position
+Software Engineer Intern
+}[% 4: Employer
+Siemens AG
+][% 5: Description
+Architectural conception and implementation of a behavior-driven development platform that automates the test specification for three major business areas
 ][% 6: Technologies
 Python
 ]
 
 \block%
 {% 1: Time frame start
-02/2010
+07/2012
 }[% 2: Time frame end
-08/2010
+03/2014
 ]{% 3: Position
-Part-Time job
+Technical Project Manager
 }[% 4: Employer
-My part-time Employer
+Greimel IT-Systemhaus GmbH
 ][% 5: Description
-I worked on things part time
+Led the development of a Document Management System including a financial accounting interface and a dynamic workflow management system on behalf of the Auer Packaging GmbH
 ][% 6: Technologies
+Java Services, JavaScript, PHP
+]
+
+\block%
+{% 1: Time frame start
+10/2012
+}[% 2: Time frame end
+09/2013
+]{% 3: Position
+Web Developer
+}[% 4: Employer
+Promonde JLT
+][% 5: Description
+Programmed an advertising website for Arabic countries with over 10k users per day as well as its administration backend
+][% 6: Technologies
+CakePHP, JavaScript
+]
+
+\block%
+{% 1: Time frame start
+10/2012
+}[% 2: Time frame end
+09/2013
+]{% 3: Position
+Technical Project Manager
+}[% 4: Employer
+Deutsche Flugsicherung GmbH
+][% 5: Description
+Developed Aerio, a tool that simplifies the preparation of exercises for air traffic controllers and pilots. Functions include synchronization with live flight data, best-route-finding in thousands of waypoints and pre-simulation.
+Unfortunately, the project never went live
+][% 6: Technologies
+Java
+]
+
+\block%
+{% 1: Time frame start
+07/2012
+}[% 2: Time frame end
+]{% 3: Position
+Foundation of Martin Schrimpf Software Solutions
+}[% 4: Employer
+][% 5: Description
+Software Development and Services, focus on process optimization
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+01/2012
+}[% 2: Time frame end
+04/2012
+]{% 3: Position
+Web Developer
+}[% 4: Employer
+R-Backup Datensicherung GmbH
+][% 5: Description
+Developed a multilingual website’s front- and backend to administrate partners and customers and to issue invoices
+][% 6: Technologies
+JavaScript, PHP
+]
+
+\block%
+{% 1: Time frame start
+08/2011
+}[% 2: Time frame end
+06/2012
+]{% 3: Position
+Software Developer
+}[% 4: Employer
+Greimel IT-Systemhaus GmbH
+][% 5: Description
+Developed an ERP-integrated price-update and an interface for stock list updates and comparison
+][% 6: Technologies
+Java
 ]
 }
 
@@ -82,10 +279,60 @@ I worked on things part time
 \newcommand{\extracurricular}{%
 \block%
 {% 1: Time frame start
-01/2013
+Since 08/2015
 }[% 2: Time frame end
 ]{% 3: Activity
-Some award
+Technical Lead
+}[% 4: Organisation
+Integreat
+][% 5: Description
+Platform to deliver information from local authorities and helper organizations to refugees. Implementation of the administration backend and a cross-platform app, later coordination of the development community
+][% 6: Technologies
+Xamarin (C\#), Android (Java), WordPress (PHP)
+]
+
+\block%
+{% 1: Time frame start
+2015
+}[% 2: Time frame end
+]{% 3: Activity
+Deutschlandstipendium
+}[% 4: Organisation
+][% 5: Description
+Achievement-oriented scholarship
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+2015,16
+}[% 2: Time frame end
+]{% 3: Activity
+MINGA Mentor for International Students
+}[% 4: Organisation
+TU Munich
+][% 5: Description
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+Since 10/2013
+}[% 2: Time frame end
+]{% 3: Activity
+Rotaract Club München Residenz
+}[% 4: Organisation
+][% 5: Description
+Youth club of Rotary, based on three pillars: community, help, learn. Active participation in social initiatives, e.g. gingerbread house baking with our orphanage sponsorship
+][% 6: Technologies
+]
+
+\block%
+{% 1: Time frame start
+2013,14,15
+}[% 2: Time frame end
+]{% 3: Activity
+e-fellows.net scholarship
 }[% 4: Organisation
 ][% 5: Description
 ][% 6: Technologies
@@ -93,16 +340,36 @@ Some award
 
 \block%
 {% 1: Time frame start
-Since 09/2010
+10/2012
 }[% 2: Time frame end
 ]{% 3: Activity
-My social activity
+SAP Certified Business Associate with SAP ERP 6.0
 }[% 4: Organisation
-My social organisation
 ][% 5: Description
-I did social stuff here
 ][% 6: Technologies
 ]
+
+\block%
+{% 1: Time frame start
+10/2012
+}[% 2: Time frame end
+]{% 3: Activity
+English Language Certificate C2/UNIcert level IV
+}[% 4: Organisation
+][% 5: Description
+][% 6: Technologies
+]
+}
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+\newcommand{\languages}{
+\languageproficiency{German}{Native proficiency}
+\languageproficiency{English}{Full professional proficiency}
+\languageproficiency{Japanese}{Elementary proficiency}
+\languageproficiency{French}{Elementary proficiency}
 }
 
 
@@ -110,5 +377,7 @@ I did social stuff here
 %	INTERESTS
 %----------------------------------------------------------------------------------------
 \newcommand{\interests}{
-\interest{Travelling}{Going abroad in places}
+\interest{Travelling}{Insights into various cultures in places such as Africa, Australia and India}
+\interest{Martial Arts}{Sporty balance, perfection of techniques and meditation with Judo and Shaolin}
+\interest{Brain-inspired Computing}{Getting behind the concepts of cognition and intelligence on the basis of biological findings}
 }
