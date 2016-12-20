@@ -28,7 +28,7 @@
 
 % Bibliography
 \usepackage[backend=bibtex, style=ieee, maxcitenames=999, maxbibnames=999]{biblatex}
-\AtEveryCitekey{\clearfield{year}} % hide year
+\AtEveryCitekey{\clearfield{year}\clearfield{url}} % hide year and url
 
 
 \usepackage{titlesec} % Customization of titles and their spacing
@@ -154,7 +154,7 @@
 {%
 \ifthenelse{\isempty{#7}}%
 {#4}%
-{#4, #7}%
+{\trim@spaces{#4}, GPA #7}%
 }%
 {#5}%
 {#6}%
