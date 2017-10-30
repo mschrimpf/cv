@@ -9,13 +9,17 @@
 %	PERSONAL
 %----------------------------------------------------------------------------------------
 \setAddress{%
-	Oberhausmehring 16\\%
-	84405 Dorfen\\%
-	Germany}
+	33 3rd Ave\\% \#204
+	Boston\\%
+	MA 02129}
+%	Oberhausmehring 16\\%
+%	84405 Dorfen\\%
+%	Germany}
 \setEmail{%
-	martin.schrimpf@outlook.com}
+%	martin.schrimpf@outlook.com
+	msch@mit.edu}
 \setMobile{%
-	+49 174 9946449}
+	+1 617-586-6748}
 \setWeb{%
 	www.mschrimpf.com}
 
@@ -26,16 +30,33 @@
 \newcommand{\education}{%
 \educationblock%
 {% 1: Time frame start
+Since 09/2017
+}{% 2: Time frame end
+}{% 3: Program
+PhD student
+}{% 4: University
+MIT Brain and Cognitive Sciences (BCS)
+}{% 5: Description
+Research at the bridge of Machine Learning and Neuroscience.
+Current rotation with James DiCarlo and Joshua Tenenbaum on visual decomposition in deep learning models as well as the brain's ventral stream.
+Future projects will be in the direction of learning.
+}{% 6: Technologies
+}{% 7: Grade
+}
+
+\educationblock%
+{% 1: Time frame start
 10/2014
 }{% 2: Time frame end
-02/2017
+05/2017
 }{% 3: Program
 Elite Master's Program Software Engineering
 }{% 4: University
 \\ 
 TU \& LMU Munich \& University of Augsburg
 }{% 5: Description
-Elite Graduate Program for a small group of students with a focus on the areas Formal Methods, Project Management, Distributed Systems, Databases, Human Computer Interaction and soft-skills. Additional courses in Machine Learning.
+Formal Methods, Distributed Systems, Project Management, Databases, Human Computer Interaction. 
+Extra courses in Machine Learning.
 \\
 \subprogram{Master's Thesis} at \organization{Harvard University} on the role of brain-inspired recurrent neural algorithms for advanced object recognition.
 }{% 6: Technologies
@@ -59,7 +80,7 @@ Combination of economic fundamentals and computer science with a focus on Inform
 \subprogram{Bachelor's Thesis} at the \organization{University of Sydney}: Investigation of hardware transactional memory and its effectiveness as a synchronization technique for databases, graded $A+$.
 \\
 \subprogram{Study Abroad} at the \organization{Auckland University of Technology}: Courses in Artificial Intelligence and Management.
-Project on a novel landmark-based approach to perceptual mapping (SLAM) at CAIR
+Project on a novel landmark-based approach to perceptual mapping (SLAM) at CAIR.
 }{% 6: Technologies
 Java, UML, SQL, C++, C, Assembly, ARIA
 }{% 7: Grade
@@ -93,6 +114,22 @@ $3.7$
 \newcommand{\professional}{%
 \block%
 {% 1: Time frame start
+05/2017
+}{% 2: Time frame end
+08/2017
+}{% 3: Position
+Deep Learning Intern
+}{% 4: Employer
+Salesforce Einstein AI (former MetaMind)
+}{% 5: Description
+Research in the emerging field of automated architecture search.
+We took a flexible approach to define a recurrent architecture and found several architectures that do not follow human intuition yet outperform the state-of-the-art model.
+}{% 6: Technologies
+PyTorch, AWS
+}
+
+\block%
+{% 1: Time frame start
 04/2016
 }{% 2: Time frame end
 11/2016
@@ -103,9 +140,9 @@ Kreiman Lab, Harvard Medical School
 }{% 5: Description
 Research at the bridge of machine learning, neuroscience and cognitive science with a focus on the role of recurrent connections.
 We improved object recognition performance on occluded objects from 45\% with Alexnet to 74\% with our models and offered a first possible application of recurrency in the human brain.
-We are also investigating the robustness of deep convolutional neural networks and the role of context for object detection
+We are also investigating the robustness of deep convolutional networks and the role of context for object recognition
 }{% 6: Technologies
-Matlab, Python, keras, Theano, Linux, ECoG, LSF
+Matlab, Python, keras, Theano, Linux, LSF, ECoG
 }
 
 \block%
@@ -151,8 +188,8 @@ Martin Schrimpf Software Solutions
 Software Development and Services - projects include:
 \begin{description}[noitemsep,topsep=0pt,font=\normalfont\itshape\space]
 \item[Greimel IT-Systemhaus GmbH] Led the development of a Document Management System including optical character recognition (OCR), a financial accounting interface and a dynamic workflow and process management system which made the client company effectively paper-free
-\item[R-Backup Datensicherung GmbH] Developed a multilingual website's front- and backend to administrate partners and customers and to issue invoices
-\item[Promonde JLT] Implemented an advertisement website for Arabic countries with over 10k users per day
+%\item[R-Backup Datensicherung GmbH] Developed a multilingual website's front- and backend to administrate partners and customers and to issue invoices
+\item[Promonde JLT] Implemented an advertisement website for Arabic countries with over 10,000 users per day
 \end{description}
 }{% 6: Technologies
 Java, JavaScript, PHP
@@ -166,25 +203,37 @@ Java, JavaScript, PHP
 \newcommand{\publications}{%
 \block%
 {% 1: Time frame start
-2016
+2017
 }{% 2: Time frame end
 }{% 3: Activity
 }{% 4: Organisation
 }{% 5: Description
 \vspace{-8pt} % this is horrible but the bibentry command seems to generate some vertical distance and I don't know how to remove it
-\fullcite{recurrency_occlusion}
+\fullcite{schrimpf2017}
 }{% 6: Technologies
 }
 
 \block%
 {% 1: Time frame start
-2016
+2017
 }{% 2: Time frame end
 }{% 3: Activity
 }{% 4: Organisation
 }{% 5: Description
 \vspace{-8pt}
-\fullcite{should_i_use_tensorflow}
+\fullcite{cheney2017robustness}
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2017
+}{% 2: Time frame end
+}{% 3: Activity
+}{% 4: Organisation
+}{% 5: Description
+\vspace{-8pt}
+\fullcite{recurrency_occlusion}
 }{% 6: Technologies
 }
 
@@ -238,6 +287,18 @@ Recurrent computations for pattern completion
 \newcommand{\awards}{%
 \block%
 {% 1: Time frame start
+2017
+}{% 2: Time frame end
+}{% 3: Activity
+Social Impact Award (Integreat)
+}{% 4: Organisation
+TUM School of Management
+}{% 5: Description
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
 2016
 }{% 2: Time frame end
 }{% 3: Activity
@@ -265,7 +326,7 @@ University Augsburg
 2016
 }{% 2: Time frame end
 }{% 3: Activity
-Integrationspreis
+Integrationspreis (Integreat)
 }{% 4: Organisation
 Government of Swabia
 }{% 5: Description
@@ -277,7 +338,7 @@ Government of Swabia
 2016
 }{% 2: Time frame end
 }{% 3: Activity
-Winner Social Society
+Winner Social Society (Integreat)
 }{% 4: Organisation
 Idea- and Startup-competition Generation-D
 }{% 5: Description
@@ -348,7 +409,7 @@ Co-Founder and Technical Lead
 Integreat
 }{% 5: Description
 Platform to deliver information from local authorities and helper organizations to refugees in over 80 German cities.
-Implementation of the administration backend and a cross-platform app, later coordination of the development community
+Implementation of the administration backend and a cross-platform app, coordination of the development community
 }{% 6: Technologies
 Xamarin (C\#), Android (Java), WordPress (PHP)
 }
@@ -368,13 +429,14 @@ TU Munich
 
 \block%
 {% 1: Time frame start
-Since 10/2013
+2013
 }{% 2: Time frame end
+2016
 }{% 3: Activity
 Rotaract Club München Residenz
 }{% 4: Organisation
 }{% 5: Description
-Youth club of Rotary, based on the community, helping and learning. Social initiatives, e.g. with our orphanage sponsorship
+Youth club of Rotary: community, helping and learning. Social initiatives, e.g. with our orphanage sponsorship
 }{% 6: Technologies
 }
 }

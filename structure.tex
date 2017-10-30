@@ -27,7 +27,7 @@
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
 % Bibliography
-\usepackage[backend=bibtex, style=ieee, maxcitenames=999, maxbibnames=999]{biblatex}
+\usepackage[backend=bibtex, style=nature, maxcitenames=999, maxbibnames=999]{biblatex}
 \AtEveryCitekey{\clearfield{year}\clearfield{url}} % hide year and url
 
 
@@ -121,10 +121,10 @@
 \ifthenelse{\NOT \isempty{#5}}%
 {\parbox[t]{0.79\linewidth}{\raggedright \trim@spaces{#5}}}{}%
 % technologies
-\ifthenelse{\NOT \isempty{#6}}{%
-\\
-\underline{Technologies}: #6%
-}{}%
+%\ifthenelse{\NOT \isempty{#6}}{%
+%\\
+%\underline{Technologies}: #6%
+%}{}%
 \makeatother
 \end{tabular}
 \end{tabular}
