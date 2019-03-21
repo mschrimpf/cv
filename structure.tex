@@ -19,6 +19,7 @@
 \usepackage{xcolor} % Coloring of text
 
 \usepackage{amssymb} % More symbols
+\usepackage{eurosym} % euro symbol
 
 \setcounter{secnumdepth}{0} % Suppress section numbering
 
@@ -110,10 +111,14 @@
 \makeatletter%
 \ifthenelse{\NOT \isempty{#3} \OR \NOT \isempty{#4}}{%
 \parbox[t]{0.79\linewidth}{\raggedright %
-	\blocktitle{\trim@spaces{#3}}%
+%	\blocktitle{\trim@spaces{#3}}%
+%	\ifthenelse{\NOT \isempty{#3} \AND \NOT \isempty{#4}}%
+%	{, }{}%
+%	\organization{#4}%
+	\organization{#4}%
 	\ifthenelse{\NOT \isempty{#3} \AND \NOT \isempty{#4}}%
 	{, }{}%
-	\organization{#4}%
+	\position{#3}%
 \par}%
 }{}%
 % line break only if headers and description present
@@ -138,6 +143,9 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\organization}[1]{%
+\blocktitle{\trim@spaces{#1}}}%
+
+\newcommand{\position}[1]{%
 \textit{\trim@spaces{#1}}}%
 
 \newcommand{\subprogram}[1]{%
@@ -148,18 +156,33 @@
 %	EDUCATION COMMAND
 %----------------------------------------------------------------------------------------
 
-\newcommand{\educationblock}[7]{%
+\newcommand{\educationblock}[6]{%
 \block%
 {#1}%
 {#2}%
 {#3}%
-{%
-\ifthenelse{\isempty{#7}}%
 {#4}%
-{\trim@spaces{#4}, GPA #7}%
-}%
 {#5}%
 {#6}%
+}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATION COMMAND
+%----------------------------------------------------------------------------------------
+
+\newcommand{\publication}[2]{%
+\block%
+{% 1: Time frame start
+#1%
+}{% 2: Time frame end
+}{% 3: Activity
+}{% 4: Organisation
+}{% 5: Description
+\fullcite{#2}%
+\vspace{5pt}%
+}{% 6: Technologies
+}
 }
 
 
@@ -176,7 +199,7 @@
 \block%
 {#1}
 {}
-{#2 {\normalfont[\trim@spaces{#4}]}}
+{#2 \ifthenelse{\NOT \isempty{#4}}{\normalfont[\trim@spaces{#4}]}{}}%
 {#3}
 {}
 {}

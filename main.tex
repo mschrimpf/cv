@@ -60,7 +60,7 @@ Mobile  \> \varMobile \\
 %	PROFESSIONAL SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Experience}
+\section{Research and Industry Experience}
 \professional{}
 
 
@@ -95,11 +95,21 @@ Mobile  \> \varMobile \\
 
 
 %----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\ifcsname teaching\endcsname%
+\section{Teaching}
+\teaching{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
 %	EXTRACURRICULAR
 %----------------------------------------------------------------------------------------
 
 \ifcsname extracurricular\endcsname%
-\section{Extracurricular Activities}
+\section{Service}
 \extracurricular{}
 \fi
 
@@ -132,9 +142,11 @@ Mobile  \> \varMobile \\
 %	ADVISED STUDENTS
 %----------------------------------------------------------------------------------------
 
+\iffalse
 \ifcsname advisedstudents\endcsname%
 \section{Mentored Students}
 \advisedstudents{}
+\fi
 \fi
 
 
@@ -142,9 +154,11 @@ Mobile  \> \varMobile \\
 %	REFERENCES
 %----------------------------------------------------------------------------------------
 
+\iffalse
 \ifcsname references\endcsname%
 \section{References}
 \references{}
+\fi
 \fi
 
 

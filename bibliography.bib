@@ -1,29 +1,79 @@
-@article{schrimpf2017,          
+
+@article{bashivan2018continual,
+  title={Continual Learning with Self-Organizing Maps},
+  author={Pouya Bashivan and Martin Schrimpf and Robert Ajemian and Irina Rish and Matthew Riemer and Yuhai Tu},
+  journal={Neural Information Processing Systems (NeurIPS) Continual Learning Workshop},
+  year={2018},
+}
+
+@article{arend2018single,
+  title={Single units in a deep neural network functionally correspond with neurons in the brain: preliminary results},
+  author={Luke Arend and Yena Han and Martin Schrimpf and Pouya Bashivan and Kohitij Kar and Tomaso Poggio and James J DiCarlo and Xavier Boix},
+  journal={CBMM Memo},
+  year={2018},
+}
+
+@article{kubilius2018,          
+	author = {Kubilius*, Jonas and Schrimpf*, Martin and Nayebi, Aran and Bear, Daniel and Yamins, Daniel L. K. and DiCarlo, James J.},
+	title = {CORnet: Modeling the Neural Mechanisms of Core Object Recognition},
+	year = {2018},
+	abstract = {Deep artificial neural networks with spatially repeated processing (a.k.a., deep convolutional ANNs) have been established as the best class of candidate models of visual processing in primate ventral visual processing stream. Over the past five years, these ANNs have evolved from a simple feedforward eight-layer architecture in AlexNet to extremely deep and branching NASNet architectures, demonstrating increasingly better object categorization performance and increasingly better explanatory power of both neural and behavioral responses. However, from the neuroscientist{\textquoteright}s point of view, the relationship between such very deep architectures and the ventral visual pathway is incomplete in at least two ways. On the one hand, current state-of-the-art ANNs appear to be too complex (e.g., now over 100 levels) compared with the relatively shallow cortical hierarchy (4-8 levels), which makes it difficult to map their elements to those in the ventral visual stream and to understand what they are doing. On the other hand, current state-of-the-art ANNs appear to be not complex enough in that they lack recurrent connections and the resulting neural response dynamics that are commonplace in the ventral visual stream. Here we describe our ongoing efforts to resolve both of these issues by developing a "CORnet" family of deep neural network architectures. Rather than just seeking high object recognition performance (as the state-of-the-art ANNs above), we instead try to reduce the model family to its most important elements and then gradually build new ANNs with recurrent and skip connections while monitoring both performance and the match between each new CORnet model and a large body of primate brain and behavioral data. We report here that our current best ANN model derived from this approach (CORnet-S) is among the top models on Brain-Score, a composite benchmark for comparing models to the brain, but is simpler than other deep ANNs in terms of the number of convolutions performed along the longest path of information processing in the model. All CORnet models are available at https://github.com/dicarlolab/CORnet, and we plan to update this manuscript and the available models in this family as they are produced.},
+	journal = {bioRxiv}
+}
+
+@article{schrimpf2018b,  
+	author = {Schrimpf*, Martin and Kubilius*, Jonas and Hong, Ha and Majaj, Najib J. and Rajalingham, Rishi and Issa, Elias B. and Kar, Kohitij and Bashivan, Pouya and Prescott-Roy, Jonathan and Schmidt, Kailyn and Yamins, Daniel L. K. and DiCarlo, James J.},
+	title = {Brain-Score: Which Artificial Neural Network for Object Recognition is most Brain-Like?},
+	year = {2018},
+	optdoi = {10.1101/407007},
+	optpublisher = {Cold Spring Harbor Laboratory},
+	abstract = {The internal representations of early deep artificial neural networks (ANNs) were found to be remarkably similar to the internal neural representations measured experimentally in the primate brain. Here we ask, as deep ANNs have continued to evolve, are they becoming more or less brain-like? ANNs that are most functionally similar to the brain will contain mechanisms that are most like those used by the brain. We therefore developed Brain-Score - a composite of multiple neural and behavioral benchmarks that score any ANN on how similar it is to the brain{\textquoteright}s mechanisms for core object recognition - and we deployed it to evaluate a wide range of state-of-the-art deep ANNs. Using this scoring system, we here report that: (1) DenseNet-169, CORnet-S and ResNet-101 are the most brain-like ANNs. (2) There remains considerable variability in neural and behavioral responses that is not predicted by any ANN, suggesting that no ANN model has yet captured all the relevant mechanisms. (3) Extending prior work, we found that gains in ANN ImageNet performance led to gains on Brain-Score. However, correlation weakened at \&gt;= 70\% top-1 ImageNet performance, suggesting that additional guidance from neuroscience is needed to make further advances in capturing brain mechanisms. (4) We uncovered smaller (i.e. less complex) ANNs that are more brain-like than many of the best-performing ImageNet models, which suggests the opportunity to simplify ANNs to better understand the ventral stream. The scoring system used here is far from complete. However, we propose that evaluating and tracking model-benchmark correspondences through a Brain-Score that is regularly updated with new brain data is an exciting opportunity: experimental benchmarks can be used to guide machine network evolution, and machine networks are mechanistic hypotheses of the brain{\textquoteright}s network and thus drive next experiments. To facilitate both of these, we release Brain-Score.org: a platform that hosts the neural and behavioral benchmarks, where ANNs for visual processing can be submitted to receive a Brain-Score and their rank relative to other models, and where new experimental data can be naturally incorporated.},
+	optURL = {https://www.biorxiv.org/content/early/2018/09/05/407007},
+	opteprint = {https://www.biorxiv.org/content/early/2018/09/05/407007.full.pdf},
+	journal = {bioRxiv (\textnormal{\href{http://www.sciencemag.org/news/2018/09/smarter-ais-could-help-us-understand-how-our-brains-interpret-world}{covered by \textit{Science}})}}
+}
+
+@article{boix2018,          
+title={Redundancy Emerges in Overparametrized Deep Neural Networks},          
+author={Xavier Boix* and Martin Schrimpf* and Arend, Luke and Poggio, Tomaso and Kreiman, Gabriel},          
+journal={submitted},     
+year={2018},
+}
+
+@article{schrimpf2018,          
 title={A Flexible Approach to Automated RNN Architecture Generation},          
-author={Schrimpf, Martin and Merity, Stephen and Socher, Richard},          
-journal={submitted},          
-year={2017}      
+author={Martin Schrimpf* and Stephen Merity* and Richard Socher},          
+journal={ICLR},     
+year={2018},
+url = "https://arxiv.org/abs/1712.07316",
 }
 
 @article{cheney2017robustness,
   title={On the Robustness of Convolutional Neural Networks to Internal Architecture and Weight Perturbations},
   author={Nicholas Cheney* and Martin Schrimpf* and Gabriel Kreiman},
-  journal={arXiv preprint},
-  archivePrefix = "arXiv",
-  eprint =       {1703.08245}, 
-  primaryClass = "cs.AI",
-  url =          "https://arxiv.org/abs/1703.08245",
+  journal={CBMM Memo},
   year={2017},
   abstract = "Deep convolutional neural networks are generally regarded as robust function approximators. So far, this intuition is based on perturbations to external stimuli such as the images to be classified. Here we explore the robustness of convolutional neural networks to perturbations to the internal weights and architecture of the network itself. We show that convolutional networks are surprisingly robust to a number of internal perturbations in the higher convolutional layers but the bottom convolutional layers are much more fragile. For instance, Alexnet shows less than a 30% decrease in classification performance when randomly removing over 70% of weight connections in the top convolutional or dense layers but performance is almost at chance with the same perturbation in the first convolutional layer. Finally, we suggest further investigations which could continue to inform the robustness of convolutional networks to internal perturbations."
 }
 
-@article{recurrency_occlusion,
-    author =       "Hanlin Tang* and Martin Schrimpf* and Bill Lotter* and Charlotte Moerman and Ana Paredes and Josue Ortega Caro and Walter Hardesty and David Cox and Gabriel Kreiman",
-    title =        "Recurrent computations for pattern completion",
-    journal =      "submitted",
-    pubtype =      "", 
-    year =         "2017", 
-    abstract =     "Making inferences from partial information constitutes a critical aspect of cognition. In visual perception, pattern completion leads to recognition of poorly visible or occluded objects. We combined psychophysics, physiology and computational models to test the hypothesis that pattern completion is implemented by recurrent computations. First, human subjects robustly recognized objects even when rendered <10% visible, but performance deteriorated when recurrent computations were interrupted by backward masking. Second, invasive physiological responses along the human ventral cortex also exhibited pattern completion, where responses to partially visible objects were delayed compared to whole objects, suggesting the need for additional computations. These physiological delays were correlated with the backward masking effects. Third, state-of-the-art feed-forward computational architectures were not robust to partial visibility. However, a model augmented with attractor-based recurrent connectivity matched human performance. These results provide a strong argument of plausibility for the role of recurrent computations in making visual inferences from partial information."
+@article {TangSchrimpfLotter2018,
+	author = {Tang*, Hanlin and Schrimpf*, Martin and Lotter*, William and Moerman, Charlotte and Paredes, Ana and Ortega Caro, Josue and Hardesty, Walter and Cox, David and Kreiman, Gabriel},
+	title = {Recurrent computations for visual pattern completion},
+	year = {2018},
+	optdoi = {10.1073/pnas.1719397115},
+	publisher = {National Academy of Sciences},
+	abstract = {The ability to complete patterns and interpret partial information is a central property of intelligence. Deep convolutional network architectures have proved successful in labeling whole objects in images and capturing the initial 150 ms of processing along the ventral visual cortex. This study shows that human object recognition abilities remain robust when only small amounts of information are available due to heavy occlusion, but the performance of bottom-up computational models is impaired under limited visibility. The results provide combined behavioral, neurophysiological, and modeling insights showing how recurrent computations may help the brain solve the fundamental challenge of pattern completion.Making inferences from partial information constitutes a critical aspect of cognition. During visual perception, pattern completion enables recognition of poorly visible or occluded objects. We combined psychophysics, physiology, and computational models to test the hypothesis that pattern completion is implemented by recurrent computations and present three pieces of evidence that are consistent with this hypothesis. First, subjects robustly recognized objects even when they were rendered \&lt;15\% visible, but recognition was largely impaired when processing was interrupted by backward masking. Second, invasive physiological responses along the human ventral cortex exhibited visually selective responses to partially visible objects that were delayed compared with whole objects, suggesting the need for additional computations. These physiological delays were correlated with the effects of backward masking. Third, state-of-the-art feed-forward computational architectures were not robust to partial visibility. However, recognition performance was recovered when the model was augmented with attractor-based recurrent connectivity. The recurrent model was able to predict which images of heavily occluded objects were easier or harder for humans to recognize, could capture the effect of introducing a backward mask on recognition behavior, and was consistent with the physiological delays along the human ventral visual stream. These results provide a strong argument of plausibility for the role of recurrent computations in making visual inferences from partial information.},
+	optissn = {0027-8424},
+	optURL = {http://www.pnas.org/content/early/2018/08/07/1719397115},
+	opteprint = {http://www.pnas.org/content/early/2018/08/07/1719397115.full.pdf},
+	journal = {PNAS}
+}
+
+@article{schrimpf2016,
+	author = {Schrimpf, Martin and Tang, Hanlin and and Lotter, William and Paredes, Ana and Ortega Caro, Josue and Hardesty, Walter and Cox, David and Kreiman, Gabriel},
+	title = {Recurrent computations for pattern completion},
+	year = {2016},
+	journal = {NIPS Brains and Bits Workshop}
 }
 
 @manual{should_i_use_tensorflow,
