@@ -60,7 +60,7 @@ Mobile  \> \varMobile \\
 %	PROFESSIONAL SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Experience}
+\section{Research and Industry Experience}
 \professional{}
 
 
@@ -95,12 +95,32 @@ Mobile  \> \varMobile \\
 
 
 %----------------------------------------------------------------------------------------
+%	TEACHING
+%----------------------------------------------------------------------------------------
+
+\ifcsname teaching\endcsname%
+\section{Teaching}
+\teaching{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
 %	EXTRACURRICULAR
 %----------------------------------------------------------------------------------------
 
 \ifcsname extracurricular\endcsname%
-\section{Extracurricular Activities}
+\section{Service}
 \extracurricular{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	GRANTS
+%----------------------------------------------------------------------------------------
+
+\ifcsname grants\endcsname%
+\section{Grant Writing}
+\grants{}
 \fi
 
 
@@ -108,9 +128,11 @@ Mobile  \> \varMobile \\
 %	LANGUAGES
 %----------------------------------------------------------------------------------------
 
+\iffalse
 \ifcsname languages\endcsname%
 \section{Languages}
 \languages{}
+\fi
 \fi
 
 
@@ -118,9 +140,11 @@ Mobile  \> \varMobile \\
 %	INTERESTS
 %----------------------------------------------------------------------------------------
 
+\iffalse
 \ifcsname interests\endcsname%
 \section{Interests}
 \interests{}
+\fi
 \fi
 
 
@@ -128,9 +152,11 @@ Mobile  \> \varMobile \\
 %	ADVISED STUDENTS
 %----------------------------------------------------------------------------------------
 
+\iffalse
 \ifcsname advisedstudents\endcsname%
 \section{Mentored Students}
 \advisedstudents{}
+\fi
 \fi
 
 
@@ -138,9 +164,11 @@ Mobile  \> \varMobile \\
 %	REFERENCES
 %----------------------------------------------------------------------------------------
 
+\iffalse
 \ifcsname references\endcsname%
 \section{References}
 \references{}
+\fi
 \fi
 
 

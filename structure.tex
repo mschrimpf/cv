@@ -19,6 +19,7 @@
 \usepackage{xcolor} % Coloring of text
 
 \usepackage{amssymb} % More symbols
+\usepackage{eurosym} % euro symbol
 
 \setcounter{secnumdepth}{0} % Suppress section numbering
 
@@ -85,6 +86,8 @@
 %	BLOCK COMMAND
 %----------------------------------------------------------------------------------------
 
+\newcommand{\blocktitle}[1]{\textbf{\trim@spaces{#1}}}
+
 \newcommand{\block}[6]{%
 % left column: time frame
 \begin{tabular}{p{0.15\linewidth} l}%
@@ -108,10 +111,14 @@
 \makeatletter%
 \ifthenelse{\NOT \isempty{#3} \OR \NOT \isempty{#4}}{%
 \parbox[t]{0.79\linewidth}{\raggedright %
-	\textbf{\trim@spaces{#3}}%
+%	\blocktitle{\trim@spaces{#3}}%
+%	\ifthenelse{\NOT \isempty{#3} \AND \NOT \isempty{#4}}%
+%	{, }{}%
+%	\organization{#4}%
+	\organization{#4}%
 	\ifthenelse{\NOT \isempty{#3} \AND \NOT \isempty{#4}}%
 	{, }{}%
-	\organization{#4}%
+	\position{#3}%
 \par}%
 }{}%
 % line break only if headers and description present
@@ -136,28 +143,66 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\organization}[1]{%
+\blocktitle{\trim@spaces{#1}}}%
+
+\newcommand{\position}[1]{%
 \textit{\trim@spaces{#1}}}%
 
 \newcommand{\subprogram}[1]{%
-\contourlength{0.1pt}\contournumber{10}\contour{black}{\trim@spaces{#1}}}%
+\contourlength{0.01pt}\contournumber{10}\contour{black}{\trim@spaces{#1}}}%
 
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION COMMAND
 %----------------------------------------------------------------------------------------
 
-\newcommand{\educationblock}[7]{%
+\newcommand{\educationblock}[6]{%
 \block%
 {#1}%
 {#2}%
 {#3}%
-{%
-\ifthenelse{\isempty{#7}}%
 {#4}%
-{\trim@spaces{#4}, GPA #7}%
-}%
 {#5}%
 {#6}%
+}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATION COMMAND
+%----------------------------------------------------------------------------------------
+
+\newcommand{\publication}[2]{%
+\block%
+{% 1: Time frame start
+#1%
+}{% 2: Time frame end
+}{% 3: Activity
+}{% 4: Organisation
+}{% 5: Description
+\fullcite{#2}%
+\vspace{5pt}%
+}{% 6: Technologies
+}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	AWARD COMMAND
+%----------------------------------------------------------------------------------------
+
+\newcommand{\award}[4]%
+% 1: year
+% 2: Title
+% 3: Organisation
+% 4: Description
+{%
+\block%
+{#1}
+{}
+{#2 \ifthenelse{\NOT \isempty{#4}}{\normalfont[\trim@spaces{#4}]}{}}%
+{#3}
+{}
+{}
 }
 
 
