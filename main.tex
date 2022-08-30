@@ -69,8 +69,29 @@ Mobile  \> \varMobile \\
 %----------------------------------------------------------------------------------------
 
 \ifcsname publications\endcsname%
-\section{Publications}
+\section{Peer-reviewed Publications}
 \publications{}
+{\footnotesize* = equal contribution}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACTS
+%----------------------------------------------------------------------------------------
+
+\ifcsname abstracts\endcsname%
+\section{Selected Peer-reviewed Abstracts}
+\abstracts{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	PREPRINTS
+%----------------------------------------------------------------------------------------
+
+\ifcsname preprints\endcsname%
+\section{Preprints}
+\preprints{}
 \fi
 
 
@@ -79,7 +100,7 @@ Mobile  \> \varMobile \\
 %----------------------------------------------------------------------------------------
 
 \ifcsname presentations\endcsname%
-\section{Presentations}
+\section{Invited Talks}
 \presentations{}
 \fi
 
@@ -89,8 +110,30 @@ Mobile  \> \varMobile \\
 %----------------------------------------------------------------------------------------
 
 \ifcsname awards\endcsname%
-\section{Awards}
+\section{Selected Awards and Funding}
 \awards{}
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	GRANTS
+%----------------------------------------------------------------------------------------
+
+\iffalse
+\ifcsname grants\endcsname%
+\section{Grant Writing}
+\grants{}
+\fi
+\fi
+
+
+%----------------------------------------------------------------------------------------
+%	ADVISED STUDENTS
+%----------------------------------------------------------------------------------------
+
+\ifcsname advisedstudents\endcsname%
+\section{Mentored Students}
+\advisedstudents{}
 \fi
 
 
@@ -108,21 +151,9 @@ Mobile  \> \varMobile \\
 %	EXTRACURRICULAR
 %----------------------------------------------------------------------------------------
 
-\ifcsname extracurricular\endcsname%
+\ifcsname service\endcsname%
 \section{Service}
-\extracurricular{}
-\fi
-
-
-%----------------------------------------------------------------------------------------
-%	GRANTS
-%----------------------------------------------------------------------------------------
-
-\iffalse
-\ifcsname grants\endcsname%
-\section{Grant Writing}
-\grants{}
-\fi
+\service{}
 \fi
 
 
@@ -151,27 +182,15 @@ Mobile  \> \varMobile \\
 
 
 %----------------------------------------------------------------------------------------
-%	ADVISED STUDENTS
-%----------------------------------------------------------------------------------------
-
-\iffalse
-\ifcsname advisedstudents\endcsname%
-\section{Mentored Students}
-\advisedstudents{}
-\fi
-\fi
-
-
-%----------------------------------------------------------------------------------------
 %	REFERENCES
 %----------------------------------------------------------------------------------------
 
-\iffalse
+% \iffalse
 \ifcsname references\endcsname%
 \section{References}
 \references{}
 \fi
-\fi
+% \fi
 
 
 %----------------------------------------------------------------------------------------

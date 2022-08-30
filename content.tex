@@ -27,14 +27,15 @@
 \newcommand{\education}{%
 \educationblock%
 {% 1: Time frame start
-Since 2017%Since 09/2017
+2017 %Since 09/2017
+- 2022
 }{% 2: Time frame end
 }{% 3: Program
-PhD program
+PhD
 }{% 4: University
 Massachusetts Institute of Technology (MIT)
 }{% 5: Description
-Department of Brain and Cognitive Sciences.
+Department of Brain and Cognitive Sciences. GPA $5.0/5.0$.
 \\
 Advisor: James DiCarlo.
 }{% 6: Technologies
@@ -55,7 +56,7 @@ Elite Program Software Engineering.
 %Structured approaches to Computer Science and creating software, extra courses in Machine Learning.
 %Formal Methods, Distributed Systems, Project Management, Databases, Human Computer Interaction. 
 %\\
-GPA $4.0$ w/ honors.
+GPA $4.0/4.0$ with honors.
 \\
 Thesis completed at \organization{Harvard University}.
 }{% 6: Technologies
@@ -108,6 +109,34 @@ Java, UML, SQL, C++, C, Assembly, ARIA
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
 \newcommand{\professional}{%
+% \block%
+% {% 1: Time frame start
+% %08/2022
+% Starting 2023
+% }{% 2: Time frame end
+% }{% 3: Position
+% Tenure-Track Assistant Professor
+% }{% 4: Employer
+% EPFL
+% }{% 5: Description
+% }{% 6: Technologies
+% }
+
+\block%
+{% 1: Time frame start
+%03/2022
+Since 2022
+}{% 2: Time frame end
+}{% 3: Position
+Research Scientist
+}{% 4: Employer
+MIT Quest
+}{% 5: Description
+Leading a group of research scientists and engineers to bridge natural and artificial intelligence research across the institute. % Integrative modeling of langu primate vision and language; bridging natural and artificial intelligence research across the institute.
+}{% 6: Technologies
+PyTorch, AWS
+}
+
 \block%
 {% 1: Time frame start
 %05/2017
@@ -161,17 +190,33 @@ Linux, LSF, Virtual Machines
 
 \block%
 {% 1: Time frame start
-Since 2015 %2015 %08/2015 // 03/2017
+2015 %2015 %08/2015 // 03/2017
+- 2020
 }{% 2: Time frame end
 }{% 3: Activity
 Co-Founder / Technical Advisor (since 2017)
 }{% 4: Organisation
 Integreat Digital Factory
 }{% 5: Description
-Digitization projects in social sector.
-Platform for local information distribution to refugees in dozen of German cities.
+% Digitization projects in social sector.
+Platform for distributing local information to refugees, used in every 6th city in Germany (\href{https://integreat-app.de/en/}{\textit{integreat-app.de/en}}).
 }{% 6: Technologies
 Xamarin (C\#), Android (Java), WordPress (PHP)
+}
+
+\block%
+{% 1: Time frame start
+2015%07/2015
+}{% 2: Time frame end
+%10/2015
+}{% 3: Position
+Software Engineering Intern
+}{% 4: Employer
+Siemens AG
+}{% 5: Description
+Behavior-driven testing framework to run a test specification written in natural language.% and is now used in three major business areas.
+}{% 6: Technologies
+Python
 }
 
 \block%
@@ -196,21 +241,6 @@ management system with optical character recognition to make the client company 
 Java, JavaScript, PHP
 }
 
-\block%
-{% 1: Time frame start
-2015%07/2015
-}{% 2: Time frame end
-%10/2015
-}{% 3: Position
-Software Engineering Intern
-}{% 4: Employer
-Siemens AG
-}{% 5: Description
-Behavior-driven testing framework to run a test specification written in natural language.% and is now used in three major business areas.
-}{% 6: Technologies
-Python
-}
-
 %\block%
 %{% 1: Time frame start
 %07/2014
@@ -232,23 +262,76 @@ Python
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
+
 \newcommand{\publications}{%
+
+\publication{2022}{GeigerSchrimpf2022Wiring}
+
+\publication{2021}{Schrimpf2021language}
+
+\publication{2021}{Casper2021frivolous}
+
+\publication{2020}{gan2021threedworld}
+
+\publication{2020}{Zhuang2020}
+
+\publication{2020}{DapelloMarques2020}
+
+\publication{2020}{Schrimpf2020Neuron}
 
 \publication{2019}{KubiliusSchrimpf2019}
 
 \publication{2018}{bashivan2018continual}
 
-\publication{2018}{arend2018single}
-
-\publication{2018}{schrimpf2018b}
-
 \publication{2018}{schrimpf2018}
 
 \publication{2018}{TangSchrimpfLotter2018}
 
-\publication{2017}{cheney2017robustness}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACTS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\abstracts}{%
+
+\publication{2021}{Schrimpf2021Topographic}
+
+\publication{2021}{Kar2021}
+
+\publication{2020}{Schrimpf2020snl}
+
+\publication{2020}{schrimpf2020neuromatch}
+
+\publication{2020}{marques2020cosyne}
+
+\publication{2019}{schrimpf2019cosyne}
+
+\publication{2018}{schrimpf2018ccn}
 
 \publication{2016}{schrimpf2016}
+
+}
+
+
+%----------------------------------------------------------------------------------------
+%	PREPRINTS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\preprints}{%
+
+\publication{2022}{DapelloKar2022}
+
+\publication{2021}{Marques2021}
+
+\publication{2019}{Jozwik2019primatehuman}
+
+\publication{2018}{arend2018single}
+
+\publication{2018}{schrimpf2018b}
+
+\publication{2017}{cheney2017robustness}
 
 }
 
@@ -258,116 +341,186 @@ Python
 %----------------------------------------------------------------------------------------
 \newcommand{\presentations}{%
 
-\block% invited
-{% 1: Time frame start
-2019  % Oct 29, 2019
-}{% 2: Time frame end
-}{% 3: Activity
-}{% 4: Organisation
-MIT BCS Cog Lunch%: Neuro-Symbolic Computation and Machine Common Sense
-%author={Schrimpf*, Martin and Kubilius*, Jonas and DiCarlo, James J.},
-}{% 5: Description
+\presentation% invited
+{% 1: Time
+2022  % May 13
+}{% 2: Organisation
+Tenyx
+}{% 3: Description
+Advancing System Models of Human Intelligence via Integrative Benchmarking
+}
+
+\presentation% invited
+{% 1: Time
+2022  % April 28
+}{% 2: Organisation
+EPFL
+}{% 3: Description
+Advancing System Models of Human Intelligence via Integrative Benchmarking
+}
+
+\presentation% invited
+{% 1: Time
+2022  % April 06
+}{% 2: Organisation
+Erlangen AI meetup
+}{% 3: Description
+Artificial Neural Networks Converge to Brain Like Processing in Vision and Language
+}
+
+\presentation% invited
+{% 1: Time
+2022  % March 11
+}{% 2: Organisation
+MIT, BCS interviews
+}{% 3: Description
+Advancing System Models of Brain Processing via Integrative Benchmarking
+}
+
+\presentation% invited
+{% 1: Time
+2021  % Sep 16
+}{% 2: Organisation
+MIT, Fiete lab
+}{% 3: Description
+Topographic Neural Networks Predict the Behavioral Effects of Causal Perturbations in Primate IT Cortex
+}
+
+\presentation% invited
+{% 1: Time
+2021  % Jul 05
+}{% 2: Organisation
+Telluride Workshop  % https://sites.google.com/view/tellurideneuromorphic2021
+}{% 3: Description
 Brain-Like Object Recognition with High-Performing Shallow Recurrent ANNs
-}{% 6: Technologies
 }
 
-\block% invited
-{% 1: Time frame start
+\presentation% invited
+{% 1: Time
+2021  % May 27
+}{% 2: Organisation
+MIT, Yang lab
+}{% 3: Description
+Integrative Neurally-Mechanistic Models of Primate Visual Object Recognition
+}
+
+\presentation% invited
+{% 1: Time
+2021  % May 20
+}{% 2: Organisation
+Stanford University, NLP seminar
+}{% 3: Description
+The neural architecture of language: Integrative modeling converges on predictive processing
+}
+
+\presentation% invited
+{% 1: Time
+2021  % Mar 2021
+}{% 2: Organisation
+MIT, Saxe Lab
+}{% 3: Description
+The neural architecture of language: Integrative modeling converges on predictive processing
+}
+
+\presentation% invited
+{% 1: Time
+2020  % Dec 1, 2020
+}{% 2: Organisation
+GDR TAL, France NLP  % annual national NLP meeting in France: Automatic Language Processing and Cognitive Sciences https://gdr-tal.ls2n.fr/
+}{% 3: Description
+The neural architecture of language: Integrative modeling converges on predictive processing
+}
+
+\presentation% invited
+{% 1: Time
+2020  % May 22
+}{% 2: Organisation
+MIT, Kanwisher Lab
+}{% 3: Description
+The neural architecture of language: Integrative modeling converges on predictive processing
+}
+
+\presentation% invited
+{% 1: Time
+2020  % Jan 22, 2020
+}{% 2: Organisation
+Brown University, Serre lab
+}{% 3: Description
+Integrative Benchmarking with Brain-Score to Build Brain-Like Neural Models of Object Recognition
+}
+
+\presentation% invited
+{% 1: Time
+2020  % Mar 02, 2020
+}{% 2: Organisation
+Cosyne Workshop: Decision Making
+}{% 3: Description
+Brain-Score
+}
+
+\presentation% invited
+{% 1: Time
+2020  % Mar 03, 2020
+}{% 2: Organisation
+Cosyne Workshop: Neural Networks and the Brain % Closing the Gap between 
+}{% 3: Description
+Brain-Score: a collaborative platform for evaluating models of vision
+}
+
+\presentation% invited
+{% 1: Time
+2019  % Oct 29, 2019
+}{% 2: Organisation
+MIT, BCS Cog Lunch
+}{% 3: Description
+Brain-Like Object Recognition with High-Performing Shallow Recurrent ANNs
+}
+
+\presentation% invited
+{% 1: Time
 2019  % Sep 18, 2019
-}{% 2: Time frame end
-}{% 3: Activity
-}{% 4: Organisation
-IBM AI Week%: Neuro-Symbolic Computation and Machine Common Sense
+}{% 2: Organisation
+IBM, AI Week%, Neuro-Symbolic Computation and Machine Common Sense
 %author={Schrimpf*, Martin and Kubilius*, Jonas and DiCarlo, James J.},
-}{% 5: Description
+}{% 3: Description
 Towards a synthetic, photorealistic replacement of ImageNet
-}{% 6: Technologies
 }
 
-\block%
-{% 1: Time frame start
+\presentation%
+{% 1: Time
 2019  % Mar 07, 2019
-}{% 2: Time frame end
-}{% 3: Activity
-}{% 4: Organisation
+}{% 2: Organisation
 Center for Brain-Inspired Computing (C-BRIC)
 %author={Schrimpf*, Martin and Kubilius*, Jonas and DiCarlo, James J.},
-}{% 5: Description
+}{% 3: Description
 Brain-Score: Which Artificial Neural Network for Object Recognition is most Brain-Like?
-}{% 6: Technologies
 }
 
-\block%
-{% 1: Time frame start
-2019  % Feb 28-Mar 03
-}{% 2: Time frame end
-}{% 3: Activity
-}{% 4: Organisation
-Computational and Systems Neuroscience (Cosyne)
-%author={Schrimpf*, Martin and Kubilius*, Jonas and DiCarlo, James J.},
-}{% 5: Description
-Using Brain-Score to Evaluate and Build Neural Networks for Brain-Like Object Recognition
-}{% 6: Technologies
-}
-
-\block%
-{% 1: Time frame start
+\presentation%
+{% 1: Time
 2019  % Feb 12
-}{% 2: Time frame end
-}{% 3: Activity
-}{% 4: Organisation
-Center for Brains, Minds and Machines (CBMM)
-}{% 5: Description
+}{% 2: Organisation
+Center for Brains, Minds and Machines (CBMM; MIT/Harvard)
+}{% 3: Description
 Transforming machine learning models into brain models
-}{% 6: Technologies
 }
 
-\block%
-{% 1: Time frame start
-2018  % Sep
-}{% 2: Time frame end
-}{% 3: Activity
-}{% 4: Organisation
-Cognitive Computational Neuroscience (CCN)
-}{% 5: Description
-Brain-Score: Which Artificial Neural Network Best Emulates the Brain’s Neural Network?
-}{% 6: Technologies
-}
-
-\block%
-{% 1: Time frame start
+\presentation%
+{% 1: Time
 2018  % Feb
-}{% 2: Time frame end
-}{% 3: Activity
-}{% 4: Organisation
-Tenenbaum Lab, MIT
-}{% 5: Description
+}{% 2: Organisation
+MIT, Tenenbaum Lab
+}{% 3: Description
 A Flexible Approach to Automated RNN Architecture Generation
-}{% 6: Technologies
 }
 
-\block%
-{% 1: Time frame start
-2016  % Dec
-}{% 2: Time frame end
-}{% 3: Activity
-}{% 4: Organisation
-Brains \& Bits, NIPS Workshops
-}{% 5: Description
-Recurrent computations for pattern completion
-}{% 6: Technologies
-}
-
-\block%
-{% 1: Time frame start
+\presentation%
+{% 1: Time
 2016  % Oct
-}{% 2: Time frame end
-}{% 3: Activity
-}{% 4: Organisation
-Systems Club, Harvard Medical School
-}{% 5: Description
+}{% 2: Organisation
+Harvard Medical School, Systems Club
+}{% 3: Description
 Recurrent computations for pattern completion
-}{% 6: Technologies
 }
 }
 
@@ -377,20 +530,72 @@ Recurrent computations for pattern completion
 %----------------------------------------------------------------------------------------
 \newcommand{\grants}{%
 
-\block%
+\block
 {% 1: Time frame start
-2019  % June 04
+2020  % November
 }{% 2: Time frame end
 }{% 3: Activity
-Baylor + MIT
+MIT
 }{% 4: Organisation
-UG1 (Clinical Research)
+NSF CRCNS
 }{% 5: Description
-% Human electrical stimulation of V1 blind patients
+%Automated model search on Brain-Score
 }{% 6: Technologies
 }
 
-\block%
+% \block% not funded
+% {% 1: Time frame start
+% 2020  % August
+% }{% 2: Time frame end
+% }{% 3: Activity
+% MIT
+% }{% 4: Organisation
+% Merck Next generation machine learning  % https://www.emdgroup.com/en/research/open-innovation/2020-research-grants.html
+% }{% 5: Description
+% %Brain-Score, CORnet, VOneNet ++
+% }{% 6: Technologies
+% }
+
+% \block% not funded
+% {% 1: Time frame start
+% 2019  % June 04
+% }{% 2: Time frame end
+% }{% 3: Activity
+% Baylor + MIT
+% }{% 4: Organisation
+% UG1 (Clinical Research)
+% }{% 5: Description
+% % Human electrical stimulation of V1 blind patients
+% }{% 6: Technologies
+% }
+
+\block
+{% 1: Time frame start
+2019
+}{% 2: Time frame end
+}{% 3: Activity
+MIT
+}{% 4: Organisation
+ONR
+}{% 5: Description
+%Automated model search on Brain-Score
+}{% 6: Technologies
+}
+
+\block
+{% 1: Time frame start
+2019
+}{% 2: Time frame end
+}{% 3: Activity
+MIT
+}{% 4: Organisation
+Simons Foundation
+}{% 5: Description
+%Automated model search on Brain-Score
+}{% 6: Technologies
+}
+
+\block%funded
 {% 1: Time frame start
 2019  % June 06
 }{% 2: Time frame end
@@ -403,6 +608,18 @@ IBM Large Project Proposal
 }{% 6: Technologies
 }
 
+\block%funded
+{% 1: Time frame start
+2018
+}{% 2: Time frame end
+}{% 3: Activity
+MIT
+}{% 4: Organisation
+C-BRIC
+}{% 5: Description
+}{% 6: Technologies
+}
+
 }
 
 
@@ -410,6 +627,54 @@ IBM Large Project Proposal
 %	TEACHING
 %----------------------------------------------------------------------------------------
 \newcommand{\teaching}{%
+
+\block%
+{% 1: Time frame start
+2022 % August 4 - 25
+}{% 2: Time frame end
+}{% 3: Activity
+}{% 4: Organisation
+Brains, Minds, and Machines summer school
+}{% 5: Description
+Computational Models of Vision and Language
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2021  % Feb - May
+}{% 2: Time frame end
+}{% 3: Activity
+}{% 4: Organisation
+Systems Neuroscience Core II (Prof. Halassa)
+}{% 5: Description
+Teaching Assistant / Co-Lecturer
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2021  % Jan 15
+}{% 2: Time frame end
+}{% 3: Activity
+}{% 4: Organisation
+Guest Lecture, Program for Software Engineering UNA TUM LMU % Machine Learning course, 
+}{% 5: Description
+Engineering an Artificial Biological Intelligence
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2020  % Feb - May
+}{% 2: Time frame end
+}{% 3: Activity
+}{% 4: Organisation
+Systems Neuroscience Core II (Prof. Halassa)
+}{% 5: Description
+Teaching Assistant
+}{% 6: Technologies
+}
 
 \block%
 {% 1: Time frame start
@@ -445,7 +710,7 @@ Deep Networks and PyTorch
 }{% 4: Organisation
 Neural Mechanisms of Cognitive Computation (Prof. Halassa)
 }{% 5: Description
-Graduate course, Teaching Assistant
+Teaching Assistant
 }{% 6: Technologies
 }
 
@@ -471,6 +736,147 @@ Introduction to Deep Learning
 
 \award%
 {% 1: year
+2021 % awarded Nov 17
+}{% 2: Title
+Open Science Prize %runner-up, CAD 1,000
+}{% 3: Organisation
+Neuro - Irv and Helga Cooper Foundation
+}{% 4: Description
+}
+
+
+% \award%
+% {% 1: year
+% 2021 % awarded Sep 6
+% }{% 2: Title
+% Member
+% }{% 3: Organisation
+% \textbf{AAAS}
+% }{% 4: Description
+% }
+
+\award%
+{% 1: year
+2021 % awarded Aug 6
+}{% 2: Title
+Fellowship
+}{% 3: Organisation
+\textbf{McGovern Institute}  % Friends of the McGovern Institute
+}{% 4: Description
+tuition and stipend
+}
+
+\award%
+{% 1: year
+2021 % June 3
+}{% 2: Title
+Walle Nauta Award for Continuing Dedication in Teaching % $500
+}{% 3: Organisation
+MIT
+}{% 4: Description
+}
+
+% \award%
+% {% 1: year
+% 2021 % Feb/Mar
+% }{% 2: Title
+% nominee for the Regeneron Prize % (1 out of 2 institute-wide)
+% }{% 3: Organisation
+% MIT
+% }{% 4: Description
+% }
+
+% \award%
+% {% 1: year
+% 2020
+% }{% 2: Title
+% Zukunftspreis (Integreat)  % https://www.augsburg.de/buergerservice-rathaus/rathaus/preistraeger-und-preise/zukunftspreis
+% }{% 3: Organisation
+% Stadt Augsburg
+% }{% 4: Description
+% }
+
+\award%
+{% 1: year
+2020
+}{% 2: Title
+Postdoc-NeT-AI Fellow
+}{% 3: Organisation
+DAAD
+}{% 4: Description
+%
+}
+
+% \award%
+% % https://transformationalbusiness.live.ft.com
+% {% 1: year
+% 2020
+% }{% 2: Title
+% Excellence in Transformational Finance %+ Innovation for the Most Vulnerable and Disadvantaged
+% (Integreat)
+% }{% 3: Organisation
+% Financial Times and IFC %International Finance Corporation
+% }{% 4: Description
+% winner
+% }
+
+% \award%
+% {% 1: year
+% 2020 % Sep
+% }{% 2: Title
+% nominee for the Apple fellowship % (1 out of 5 institute-wide)
+% }{% 3: Organisation
+% MIT
+% }{% 4: Description
+% }
+
+\award%
+{% 1: year
+2020
+}{% 2: Title
+Fellowship in AI+Health
+}{% 3: Organisation
+\textbf{Takeda} %Pharmaceuticals
+}{% 4: Description
+tuition and stipend
+}
+
+% \award%
+% {% 1: year
+% 2019
+% }{% 2: Title
+% Travel Award
+% }{% 3: Organisation
+% NeurIPS
+% }{% 4: Description
+% automatic as paper author
+% }
+
+% \award%
+% {% 1: year
+% 2019 % Aug
+% }{% 2: Title
+% nominee for the Google fellowship % (1 out of 2 non-diversity spots; 4 total institute-wide)
+% }{% 3: Organisation
+% MIT
+% }{% 4: Description
+% }
+
+\block%funded
+{% 1: Time frame start
+2019  % June 06
+}{% 2: Time frame end
+}{% 3: Activity
+% MIT + IBM
+}{% 4: Organisation
+\textbf{Grant: IBM ThreeDWorld}
+}{% 5: Description
+% ThreeDWorld, Large Project Proposal
+}{% 6: Technologies
+}
+
+\award%
+{% 1: year
 2019
 }{% 2: Title
 Shoemaker Fellowship  % Hubert J P
@@ -487,9 +893,23 @@ tuition and stipend
 }{% 2: Title
 Travel award
 }{% 3: Organisation
-Patrick J. McGovern
+McGovern Institute % Patrick J. McGovern
 }{% 4: Description
+travel scholarship
 %USD 1,000
+}
+
+\block%funded
+{% 1: Time frame start
+2018
+}{% 2: Time frame end
+}{% 3: Activity
+% MIT DiCarlo lab
+}{% 4: Organisation
+\textbf{Grant: C-BRIC brain-inspired neural network models}
+}{% 5: Description
+% Semiconductor Research Corporation (SRC) 
+}{% 6: Technologies
 }
 
 \award%
@@ -499,7 +919,7 @@ Patrick J. McGovern
 }{% 2: Title
 Impact Challenge (Integreat)
 }{% 3: Organisation
-Google.org
+\textbf{Google.org}
 }{% 4: Description
 finalist, 250,000\euro{}
 }
@@ -528,16 +948,16 @@ Council of Europe
 winner
 }
 
-%\award%
-%{% 1: year
-%2017
-%}{% 2: Title
-%Social Impact Award (Integreat)
-%}{% 3: Organisation
-%TUM School of Management
-%}{% 4: Description
-%competition winner
-%}
+% \award%
+% {% 1: year
+% 2017
+% }{% 2: Title
+% Social Impact Award (Integreat)
+% }{% 3: Organisation
+% TUM School of Management
+% }{% 4: Description
+% competition winner
+% }
 
 \award%
 {% 1: year
@@ -547,7 +967,7 @@ FITweltweit
 }{% 3: Organisation
 DAAD German Academic Exchange Service
 }{% 4: Description
-scholarship for research abroad % 900 EUR/month
+scholarship % for research abroad % 900 EUR/month
 }
 
 \award%
@@ -561,27 +981,27 @@ University of Augsburg
 scholarship
 }
 
-\award%
-{% 1: year
-2016
-}{% 2: Title
-Integrationspreis (Integreat)
-}{% 3: Organisation
-Government of Swabia
-}{% 4: Description
-competition winner
-}
+% \award%
+% {% 1: year
+% 2016
+% }{% 2: Title
+% Integrationspreis (Integreat)
+% }{% 3: Organisation
+% Government of Swabia
+% }{% 4: Description
+% competition winner
+% }
 
-%\award%
-%{% 1: year
-%2016
-%}{% 2: Title
-%Winner Social Society (Integreat)
-%}{% 3: Organisation
-%Idea- and Startup-competition Generation-D
-%}{% 4: Description
-%competition winner
-%}
+% \award%
+% {% 1: year
+% 2016
+% }{% 2: Title
+% Winner Social Society (Integreat)
+% }{% 3: Organisation
+% Idea- and Startup-competition Generation-D
+% }{% 4: Description
+% competition winner
+% }
 
 \award%
 {% 1: year
@@ -589,7 +1009,7 @@ competition winner
 }{% 2: Title
 Deutschlandstipendium
 }{% 3: Organisation
-Federal Ministry for Education and Research, Roland und Ute Lacher Fonds
+Federal Ministry for Education and Research %, Roland und Ute Lacher Fonds
 }{% 4: Description
 scholarship % 300 EUR/month
 }
@@ -619,7 +1039,188 @@ scholarship
 %----------------------------------------------------------------------------------------
 %	EXTRACURRICULAR ACTIVITIES
 %----------------------------------------------------------------------------------------
-\newcommand{\extracurricular}{%
+\newcommand{\service}{%
+
+\block%
+{% 1: Time frame start
+2022% Aug 4-25
+}{% 2: Time frame end
+}{% 3: Activity
+Course Consultant
+% Scientific Course Consultant / project mentoring
+}{% 4: Organisation
+Brains, Minds, and Machines summer school
+}{% 5: Description
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2022% Jul
+}{% 2: Time frame end
+}{% 3: Activity
+Reviewer
+}{% 4: Organisation
+Neural Information Processing Systems (NeurIPS)
+}{% 5: Description
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2022% Mar 21-22
+}{% 2: Time frame end
+}{% 3: Activity
+Organizer
+}{% 4: Organisation
+Cosyne Workshop
+}{% 5: Description
+Brain-Score and beyond: confronting brain-like ANNs with neuroscientific data
+}{% 6: Technologies
+}
+
+% \block%
+% {% 1: Time frame start
+% \textbf{Reviewer}
+% }{% 2: Time frame end
+% }{% 3: Activity
+% Reviewer
+% }{% 4: Organisation
+% }{% 5: Description
+% ICLR, % 2022% reviewed in Sep/Oct 2021
+% NeurIPS, % 2021% Jun/Jul
+% ICML, % 2021% Feb/Mar, Neuroscience track
+% Nature Communications, % 2021% Jan, ML+lang
+% Neuron, % 2021% Jan, hemispheric specialization
+% eLife, % 2020%Jul, together with Mike Halassa
+% iScience, % 2020%Sep, together with Jim
+% NeurIPS Real Neurons \& Hidden Units Workshop % 2019 Sep
+% }{% 6: Technologies
+% }
+
+\block%
+{% 1: Time frame start
+2022% reviewed in Sep/Oct 2021
+}{% 2: Time frame end
+}{% 3: Activity
+Reviewer
+}{% 4: Organisation
+Intl. Conference on Learning Representations (ICLR)
+}{% 5: Description
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2021% Jun/Jul
+}{% 2: Time frame end
+}{% 3: Activity
+Reviewer
+}{% 4: Organisation
+Neural Information Processing Systems (NeurIPS)
+}{% 5: Description
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2021% Feb/Mar, Neuroscience track
+}{% 2: Time frame end
+}{% 3: Activity
+Reviewer
+}{% 4: Organisation
+International Conference on Machine Learning (ICML)
+}{% 5: Description
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2021% Jan, ML+lang
+}{% 2: Time frame end
+}{% 3: Activity
+Reviewer
+}{% 4: Organisation
+Nature Communications
+}{% 5: Description
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2021% Jan, hemispheric specialization
+}{% 2: Time frame end
+}{% 3: Activity
+Reviewer
+}{% 4: Organisation
+Neuron
+}{% 5: Description
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2020%10/19
+}{% 2: Time frame end
+}{% 3: Activity
+Organizer
+}{% 4: Organisation
+CCN GAC Workshop
+}{% 5: Description
+Is it that simple? The use of linear models in neuroscience
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2020%Jul, together with Mike Halassa
+}{% 2: Time frame end
+}{% 3: Activity
+Reviewer
+}{% 4: Organisation
+eLife
+}{% 5: Description
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2020%Sep, together with Jim
+}{% 2: Time frame end
+}{% 3: Activity
+Reviewer
+}{% 4: Organisation
+iScience
+}{% 5: Description
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2020% Mar 03
+}{% 2: Time frame end
+}{% 3: Activity
+Organizer
+}{% 4: Organisation
+Cosyne Workshop
+}{% 5: Description
+Closing the Gap between Neural Networks and the Brain
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+Since 2020
+}{% 2: Time frame end
+}{% 3: Activity
+Mentor
+}{% 4: Organisation
+Underrepresented minorities in Machine Learning  % organized by Eric Grant
+}{% 5: Description
+% H.P., 2021-02-23
+}{% 6: Technologies
+}
+
 \block%
 {% 1: Time frame start
 2019%Sep
@@ -634,11 +1235,12 @@ NeurIPS Real Neurons \& Hidden Units Workshop
 
 \block%
 {% 1: Time frame start
-2018%02/2016
+Since 2018%02/2016
 }{% 2: Time frame end
 }{% 3: Activity
 Trainee Leadership Council
 }{% 4: Organisation
+% Center for Brains, Minds and Machines (CBMM; MIT \& Harvard)
 CBMM (MIT \& Harvard)
 }{% 5: Description
 }{% 6: Technologies
@@ -661,27 +1263,27 @@ CBMM (MIT \& Harvard)
 2016%02/2016
 }{% 2: Time frame end
 }{% 3: Activity
-Organization of AI Workshop
+Organizer
 }{% 4: Organisation
-University of Augsburg
+University of Augsburg AI Workshop
 }{% 5: Description
 %Organized two-day workshop. % on Neural Networks, Machine Learning and Organic Computing. 
 %Speakers: Prof. Günther Palm, PD Rolf Würtz, and Dr. Joschka Bödecker.
 }{% 6: Technologies
 }
 
-\block
-{% 1: Time frame start
-2015
-}{% 2: Time frame end
-2016
-}{% 3: Activity
-MINGA Mentor for International Students
-}{% 4: Organisation
-TU Munich
-}{% 5: Description
-}{% 6: Technologies
-}
+% \block
+% {% 1: Time frame start
+% 2015
+% }{% 2: Time frame end
+% 2016
+% }{% 3: Activity
+% MINGA Mentor for International Students
+% }{% 4: Organisation
+% TU Munich
+% }{% 5: Description
+% }{% 6: Technologies
+% }
 
 %\block%
 %{% 1: Time frame start
@@ -726,39 +1328,121 @@ TU Munich
 
 \block%
 {% 1: Time frame start
+Since 2021 % Oct
+}{% 2: Time frame end
+% 2022
+}{% 3: Organisation
+CDTM
+}{% 4: who
+Marliawaty I Gusti Bagus
+}{% 5: Description
+Generalization of neural representations
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2020 % Dec
+}{% 2: Time frame end
+2021
+}{% 3: Organisation
+TUM
+}{% 4: who
+Paul McGrath
+}{% 5: Description
+Modeling neural perturbations
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2020 - 2021 % since July 13
+}{% 2: Time frame end
+}{% 3: Organisation
+Facebook / MIT
+}{% 4: who
+Tilak Sharma
+}{% 5: Description
+Local learning without backpropagation
+}{% 6: Technologies
+} % went on to continue at Facebook
+
+\block%
+{% 1: Time frame start
 2019
 }{% 2: Time frame end
-}{% 3: who
+2020
+}{% 3: Organisation
+MIT
+}{% 4: who
+Caleb Littlejohn
+}{% 5: Description
+Brain-Score submission platform
+}{% 6: Technologies
+} % went on to Amazon
+
+\block%
+{% 1: Time frame start
+2020
+}{% 2: Time frame end
+}{% 3: Organisation
+MIT
+}{% 4: who
+Sachi Sanghavi
+}{% 5: Description
+Dependence of action recognition on temporal integration
+}{% 6: Technologies
+}
+
+\block%
+{% 1: Time frame start
+2019
+}{% 2: Time frame end
+2020
+}{% 3: Organisation
+TUM / LMU / UNA
+}{% 4: who
+Franziska Geiger
+}{% 5: Description
+Compressing neural network weights into structured distributions
+}{% 6: Technologies
+} % went on to Google Zurich, then startup
+
+\block%
+{% 1: Time frame start
+2019
+}{% 2: Time frame end
+}{% 3: Organisation
+TUM
+}{% 4: who
 Fukushi Sato
-}{% 4: Organisation
-TUM / MIT
 }{% 5: Description
 Building temporal models of the ventral stream
 }{% 6: Technologies
-}
+} % went on to 
 
 \block%
 {% 1: Time frame start
 2018
 }{% 2: Time frame end
 2019
-}{% 3: who
-William Hartman
-}{% 4: Organisation
+}{% 3: Organisation
 MIT
+}{% 4: who
+William Hartman
 }{% 5: Description
 Identifying high-performance substructures within architectures
 }{% 6: Technologies
-}
+} % went on to work at Teladoc as a Machine Learning Engineer
 
 \block%
 {% 1: Time frame start
-Fall 2016
+2016 % Fall
 }{% 2: Time frame end
-}{% 3: who
-Jacklyn Sarette
-}{% 4: Organisation
+}{% 3: Organisation
 Emmanuel College
+}{% 4: who
+Jacklyn Sarette
 }{% 5: Description
 Behavioral experiments on visual context
 }{% 6: Technologies
@@ -766,12 +1450,12 @@ Behavioral experiments on visual context
 
 \block%
 {% 1: Time frame start
-Fall 2016
+2016 % Fall
 }{% 2: Time frame end
-}{% 3: who
-Doré de Morsier
-}{% 4: Organisation
+}{% 3: Organisation
 ETH Zurich
+}{% 4: who
+Doré de Morsier
 }{% 5: Description
 Behavioral experiments on the recognition of novel objects
 }{% 6: Technologies
@@ -779,17 +1463,17 @@ Behavioral experiments on the recognition of novel objects
 
 \block%
 {% 1: Time frame start
-Summer 2016
+2016 % Summer
 }{% 2: Time frame end
-}{% 3: who
-Wendy Fernandez
-}{% 4: Organisation
+}{% 3: Organisation
 City University of New York
+}{% 4: who
+Wendy Fernandez
 }{% 5: Description
 Behavioral experiments and data analysis on the identification of occluded objects (MIT Summer Research Program)
 }{% 6: Technologies
 }
-}
+} % went on to attend Columbia University
 
 
 %----------------------------------------------------------------------------------------
@@ -797,15 +1481,94 @@ Behavioral experiments and data analysis on the identification of occluded objec
 %----------------------------------------------------------------------------------------
 
 \newcommand{\references}{%
-\block%
-{% 1: Time frame start
-}{% 2: Time frame end
-}{% 3: who
-Prof. Gabriel Kreiman, PhD
-}{% 4: Organisation
-Children's Hospital Boston, Harvard Medical School
-}{% 5: Description
-}{% 6: Technologies
+
+\reference%
+{% who
+James DiCarlo
+}{% Organisation
+MIT (advisor)
+}{% title
+Peter de Florez Professor of Neuroscience
+% \\
+% Director, MIT Quest for Intelligence
+}{% email
+dicarlo@mit.edu
+}{% phone
+(617) 452-2045
+}
+
+\reference%
+{% who
+Joshua Tenenbaum
+}{% Organisation
+MIT
+}{% title
+Paul E. Newton Career Development Professor of Cognitive Science
+}{% Contact
+jbt@mit.edu
+}{% phone
+(617) 452-2010
+}
+
+\reference%
+{% who
+Nancy Kanwisher
+}{% Organisation
+MIT
+}{% title
+Walter A. Rosenblith Professor of Cognitive Neuroscience
+}{% Contact
+ngk@mit.edu
+}{% phone
+}
+
+\reference%
+{% who
+Gabriel Kreiman
+}{% Organisation
+Harvard %Children's Hospital Boston, Harvard Medical School
+}{% title
+Professor of Ophthalmology
+}{% Contact
+gabriel.kreiman@tch.harvard.edu
+}{% phone
+(617) 919-2530
+}
+
+\reference%
+{% who
+Evelina Fedorenko
+}{% Organisation
+MIT
+}{% title
+Associate Professor
+}{% Contact
+evelina9@mit.edu
+}{% phone
+}
+
+\reference%
+{% who
+Arash Afraz
+}{% Organisation
+NIH
+}{% title
+Chief Investigator
+}{% Contact
+arash.afraz@nih.gov
+}{% phone
+}
+
+\reference%
+{% who
+Daniel Yamins
+}{% Organisation
+Stanford
+}{% title
+Assistant Professor
+}{% Contact
+yamins@stanford.edu
+}{% phone
 }
 
 \iffalse
@@ -813,7 +1576,7 @@ Children's Hospital Boston, Harvard Medical School
 {% 1: Time frame start
 }{% 2: Time frame end
 }{% 3: who
-Prof. Uwe Röhm, PhD
+Prof. Uwe Röhm
 }{% 4: Organisation
 School of IT, University of Sydney
 }{% 5: Description
@@ -821,17 +1584,20 @@ School of IT, University of Sydney
 }
 \fi
 
+\iffalse
 \block%
 {% 1: Time frame start
 }{% 2: Time frame end
 }{% 3: who
-Prof. Dr. Helmut Krcmar
+Prof. Helmut Krcmar
 }{% 4: Organisation
 Computer science in economics, Technical University Munich
 }{% 5: Description
 }{% 6: Technologies
 }
+\fi
 
+\iffalse
 \block%
 {% 1: Time frame start
 }{% 2: Time frame end
@@ -842,4 +1608,6 @@ Software and Systems Engineering, Augsburg University
 }{% 5: Description
 }{% 6: Technologies
 }
+\fi
+
 }

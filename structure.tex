@@ -2,7 +2,8 @@
 %	PACKAGES AND CONFIGURATION
 %----------------------------------------------------------------------------------------
 
-\usepackage[a4paper, hmargin=25mm, vmargin=30mm, top=20mm]{geometry} % Use A4 paper and set margins
+% \usepackage[a4paper, hmargin=25mm, vmargin=30mm, top=20mm]{geometry} % Use A4 paper and set margins
+\usepackage[a4paper, hmargin=20mm, vmargin=25mm, top=15mm]{geometry} % Use A4 paper and set margins
 
 \usepackage{mathpazo} % Palatino font
 
@@ -28,8 +29,17 @@
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
 % Bibliography
-\usepackage[backend=bibtex, style=nature, maxcitenames=999, maxbibnames=999]{biblatex}
+\usepackage[style=nature, maxcitenames=999, maxbibnames=999]{biblatex}
 \AtEveryCitekey{\clearfield{year}\clearfield{url}} % hide year and url
+
+\renewcommand*{\mkbibnamegiven}[1]{% bold own name in bib references
+  \ifitemannotation{highlight}
+    {\textbf{#1}}
+    {#1}}
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifitemannotation{highlight}
+    {\textbf{#1}}
+    {#1}}
 
 
 \usepackage{titlesec} % Customization of titles and their spacing
@@ -187,6 +197,25 @@
 
 
 %----------------------------------------------------------------------------------------
+%	PRESENTATION COMMAND
+%----------------------------------------------------------------------------------------
+
+\newcommand{\presentation}[3]%
+% 1: Time
+% 2: Organisation
+% 3: Description
+{%
+\block%
+{#1}
+{}
+{}
+{\textnormal{#2}}
+{}% ignore title {#3}
+{}
+}
+
+
+%----------------------------------------------------------------------------------------
 %	AWARD COMMAND
 %----------------------------------------------------------------------------------------
 
@@ -200,7 +229,7 @@
 {#1}
 {}
 {#2 \ifthenelse{\NOT \isempty{#4}}{\normalfont[\trim@spaces{#4}]}{}}%
-{#3}
+{\textnormal{\trim@spaces{#3}}}
 {}
 {}
 }
@@ -233,4 +262,22 @@
 \\
 #2
 \\
+}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE COMMAND
+%----------------------------------------------------------------------------------------
+
+\newcommand{\reference}[5]
+% 1: Name
+% 2: Organisation
+% 3: title
+% 4: email
+% 5: phone
+{%
+\textbf{\trim@spaces{#1}}, \emph{#2}
+\hfill
+#4 % | #5
+\\
+#3
 }
