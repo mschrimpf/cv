@@ -26,19 +26,7 @@
 %	NAME AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}{0.45\textwidth}
-\begin{tabbing}
-\hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
-E-Mail  \> \href{mailto:\varEmail}{\varEmail} \\
-Mobile  \> \varMobile \\
-\DoIfNotEmpty{\varWeb}
-{Web \> \href{\varWeb}{\varWeb} \\}%
-\end{tabbing}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.3\textwidth}%
-\varAddress \\%
-\end{minipage}%
+\contactinformation{}
 
 
 %----------------------------------------------------------------------------------------
@@ -185,12 +173,10 @@ Mobile  \> \varMobile \\
 %	REFERENCES
 %----------------------------------------------------------------------------------------
 
-% \iffalse
 \ifcsname references\endcsname%
 \section{References}
 \references{}
 \fi
-% \fi
 
 
 %----------------------------------------------------------------------------------------

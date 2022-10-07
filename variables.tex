@@ -7,6 +7,15 @@
 \newcommand{\varMobile}{}
 \newcommand{\setMobile}[1]{\renewcommand{\varMobile}{#1}}
 
+\newcommand{\varScholar}{}
+\newcommand{\setScholar}[1]{\renewcommand{\varScholar}{#1}}
+
+\newcommand{\varGithub}{}
+\newcommand{\setGithub}[1]{\renewcommand{\varGithub}{#1}}
+
+\newcommand{\varTwitter}{}
+\newcommand{\setTwitter}[1]{\renewcommand{\varTwitter}{#1}}
+
 \newcommand{\varWeb}{}
 \newcommand{\setWeb}[1]{% optional
   \DoIfNotEmpty{#1}
@@ -27,3 +36,9 @@
     \expandafter\@firstofone
   \fi}
 \makeatother
+
+% external link icon
+\newcommand{\externallink}[0]{%
+  \space\includegraphics[height=\fontcharht\font`\B]{images/externallink}
+}
+

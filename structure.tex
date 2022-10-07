@@ -17,6 +17,8 @@
 
 \usepackage[hidelinks]{hyperref} % Colors for links, text and headings
 
+\usepackage{graphicx}  % figures
+
 \usepackage{xcolor} % Coloring of text
 
 \usepackage{amssymb} % More symbols
@@ -89,6 +91,53 @@
 \renewcommand{\title}[1]{
 {\huge{\color{black}#1}}\\ % Header section name and color
 \rule{\textwidth}{0.5mm}\\ % Rule under the header
+}
+
+
+%----------------------------------------------------------------------------------------
+%	CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\contactinformation}[0]{%
+%%% traditional forms of contact
+\begin{minipage}{0.45\textwidth}
+\begin{tabbing}
+\hspace{3cm} \= \hspace{4cm} \= \kill % Spacing within the block
+E-Mail  \> \href{mailto:\varEmail}{\varEmail} \\
+Mobile  \> \varMobile \\
+\DoIfNotEmpty{\varWeb}
+{Web \> \href{\varWeb}{\varWeb\externallink} \\}%
+\end{tabbing}
+\end{minipage}%
+\hfill
+%%% address
+% \begin{minipage}{0.3\textwidth}%
+% \varAddress \\%
+% \end{minipage}%
+%%% social media
+\begin{minipage}{0.32\textwidth}%
+% Google Scholar
+\href{\varScholar}{
+\includegraphics[height=\fontcharht\font`\B]{images/Google_Scholar_logo_blackwhite}
+\hspace{0.05cm}
+Google Scholar
+\externallink
+}\\
+% Twitter
+\href{https://twitter.com/\varTwitter}{
+\includegraphics[height=\fontcharht\font`\B]{images/Twitter-logo-grayscale}
+\hspace{0.01cm}
+@\varTwitter
+\externallink
+}\\
+% GitHub
+\href{https://github.com/\varGithub}{
+\includegraphics[height=\fontcharht\font`\B]{images/githubicon}
+\hspace{0.05cm}
+github.com/\varGithub
+\externallink
+}
+\end{minipage}%
 }
 
 
